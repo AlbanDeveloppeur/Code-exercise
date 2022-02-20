@@ -1,0 +1,281 @@
+/* Mise en place */
+
+@font-face {
+    font-family: "Hades";
+    src: url("../font/HADES.otf");
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hades {
+    font-family: "Hades";
+}
+.right {
+    float: right;
+}
+.left {
+    float: left;
+}
+.clear {
+    clear: both;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.flex {
+    display: flex;
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+
+.box-title {
+    width: 100%;
+    background: #111;
+    text-align: center;
+}
+.title {
+    color: #fff;
+    font-size: 3em;
+    padding: 15px;
+}
+
+/* HEADER */
+
+header {
+    max-height: 100vh;
+    overflow: hidden;
+}
+nav {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    background: #111;
+    z-index: 100;
+}
+nav .logo {
+    width: 300px;
+    margin-left: 50px;
+}
+.burger {   
+    margin: 25px 50px 0 0;
+    cursor: pointer;
+}
+.burger-line {
+    width: 50px;
+    height: 4px;
+    background-color: red;
+    border-radius: 10px;
+    margin: 10px 0;
+    transition: all 0.5s;
+}
+.line-one {
+    transform-origin: top left 0;
+}
+.line-three {
+    transform-origin: bottom left 0;
+}
+.burger:hover .line-one {
+    transform: rotateZ(45deg);
+    width: 42px;
+}
+.burger:hover .line-two {
+    transform: rotate(360deg);
+    opacity: 0;
+}
+.burger:hover .line-three {
+    transform: rotateZ(-45deg);
+    width: 42px;
+}
+nav .burger:hover + .menu {
+    animation: burger-menu-animation 1s ease forwards;
+}
+.menu {
+    margin-top: 100px;
+    padding-top: 20px;
+}
+.menu div {
+    width: 50%;
+}
+.menu img {
+    height: 160px;
+}
+.menu p {
+    font-size: 2em;
+}
+#wallpaper {
+    width: 100%;
+    background: url("../img/wall.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 90px;
+}
+
+/* LES PERSONNAGES */
+
+.section-character {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+.section-character:nth-child(2) {
+    background-color: rgb(102,26,26);
+}
+.menu,
+.section-character:nth-child(3) {
+    background-color: rgb(254,207,7);
+}
+.section-character:nth-child(4) {
+    background-color: rgb(54,58,67);
+}
+.section-character:nth-child(5) {
+    background-color: rgb(47,85,182);
+}
+.box-text-character {
+    width: 50%;
+    padding: 100px;
+}
+.box-text-character h3 {
+    text-align: center;
+    font-size: 2.8em;
+    margin-bottom: 30px;
+}
+.box-text-character p {
+    font-family: Arial;
+    font-size: 1.2em;
+}
+.box-img-character {
+    width: 50%;
+    text-align: center;
+}
+.box-img-character img {
+    height: 570px;
+    position: relative;
+    top: -33px;
+    z-index: 50;
+}
+#box-zagreus {
+    color: rgb(254,207,7);
+}
+.menu p,
+#box-hades {
+    color: rgb(102,26,26);
+}
+#box-thanatos {
+    color: rgb(194,118,206);
+}
+#box-magaera {
+    color: rgb(253,253,253);
+}
+
+/* LES DIEUX DE L'OLYMPE */
+
+.box-gods-background {
+    background: no-repeat url(../img/fond2.jpeg);
+    background-size: cover;
+}
+.box-gods-relative {
+    position: relative;
+    top: -10px;
+    z-index: 50;
+}
+.box-gods {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+}
+.box-gods section {
+    width: 33%;
+    height: 300px;
+    overflow-y: clip;
+    text-align: center;
+    position: relative;
+}
+.box-gods section img {
+    height: 100%;
+}
+.box-gods section .gods-name {
+    width: 50%;
+    font-size: 2.8em;
+    border-radius: 20px;
+    padding: 2px 0;
+    background: red;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 75;
+}
+.gods-text {
+    width: 100%;
+    height: 300px;
+    background: rgba(7,15,10,0.7);
+    border-radius: 30px 30px 0 0;
+    position: relative;
+    z-index: 25;
+}
+.gods-text p {
+    font-family: arial;
+    text-align: center;
+    color: #fff;
+    font-size: 0.9em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.box-gods section:hover .gods-text {
+    animation: gods-text-animation 2s ease-out forwards;
+}
+#gods-athena {
+    background: rgb(105,118,173);
+    color: rgb(252,251,168);
+}
+#gods-zeus {
+    background: rgb(254,240,165);
+    color: rgb(122,101,82);
+}
+#gods-arthemis {
+    background: rgb(80,126,61);
+    color: rgb(255,255,255);
+}
+#gods-demeter {
+    background: rgb(170,210,210);
+    color: rgb(128,102,73);
+}
+#gods-poseidon {
+    background: rgb(111,156,115);
+    color: rgb(3,17,18);
+}
+#gods-ares {
+    background: rgb(253,37,38);
+    color: rgb(231,219,207);
+}
+
+@keyframes gods-text-animation {
+    from {
+        top: 0px;
+    }
+    to {
+        top: -300px;
+    }
+}
+@keyframes burger-menu-animation {
+    from {
+        margin-top: -700px;
+    }
+    to {
+        margin-top: 100px;
+    }
+}

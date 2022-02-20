@@ -1,0 +1,171 @@
+<!-- 
+    Consigne
+
+- Accueil : 100vh
+- Barre nav : fixed + z-index 100
+- Menu hamburger : au survol apparition croix + nouveau menu
+- "Les dieux de l'olympe" => au survol items dieux, apparition box noir + texte, animation bas en haut lente (2s)
+- Favicon
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hades</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <img class="logo left" src="assets/img/logo.png" alt="Logo du jeux vidéo Hades">
+                <div class="burger right">
+                    <div class="burger-line line-one"></div>
+                    <div class="burger-line line-two"></div>
+                    <div class="burger-line line-three"></div>
+                </div>
+                
+                <div class="menu">
+                    <div>
+                        <img src="assets/img/zagreus.png" alt="Image représentant Zagreus danas le jeux vidéo Hades">
+                        <p class="hades absolute">zagreus</p>
+                    </div>
+                    <div>
+                        <p class="hades absolute">zeus</p>
+                        <img src="assets/img/Zeus.png" alt="Image représentant Zeus danas le jeux vidéo Hades">
+                    </div>
+                    <div>
+                        <img src="assets/img/Thanatos.png" alt="Image représentant Thanatos danas le jeux vidéo Hades">
+                        <p class="hades absolute">thanatos</p>
+                    </div>
+                    <div>
+                        <p class="hades absolute">magaera</p>
+                        <img src="assets/img/Megaera.png" alt="Image représentant Megaera danas le jeux vidéo Hades">
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </nav>
+            <img id="wallpaper" src="assets/img/wall.jpg" alt="">
+        </header>
+
+        <main>
+            <article>
+                <div class="box-title">
+                    <p class="title hades">les personnages</p>
+                </div>
+                <section class="section-character">
+                    <div class="box-img-character">
+                        <img src="assets/img/zagreus.png" alt="Image représentant Zagreus danas le jeux vidéo Hades">
+                    </div>
+                    <div id="box-zagreus" class="box-text-character">
+                        <h3 class="hades">zagreus</h3>
+                        <p class="text-right">
+                            Zagreus a toujours eu le sentiment qu'il n'avait pas sa place dans la Maison d'Hadès; récemment, il a décidé, contre la volonté de son père, de s'échapper du Monde des Morts, peu importe le nombre d'essais qu'il lui faudrait faire. Il est aidé et encouragé dans son voyage principalement pas son gardien Nyx et son mentor Achille. D'autres personnes en dehors de la maison d'Hadès, comme Sisyphe, Charon et les Olympiens, lui offrent parfois leur aide.
+                        </p>
+                    </div>
+                </section>
+                <section class="section-character">
+                    <div id="box-hades" class="box-text-character">
+                        <h3 class="hades">hades</h3>
+                        <p class="text-left">
+                            Hades est sévère, sérieux et dévoué à son travail. Il est montré, dans les Souvenirs qui jouent avant certaines tentatives d'évasion, comme ayant été strict et souvent cruel avec Zagreus pendant son enfance. Il a employé Achille pour enseigner le combat à Zagreus et lui donner une « direction plus ferme dans la vie ». Entre-temps, Hadès semble avoir laissé à Nyx une grande partie des soins et de l'éducation de Zagreus
+                        </p>
+                    </div>
+                    <div class="box-img-character">
+                        <img src="assets/img/hades.png" alt="Image représentant Hades dans le jeux vidéo Hades">
+                    </div>
+                </section>
+                <section class="section-character">
+                    <div class="box-img-character">
+                        <img src="assets/img/Thanatos.png" alt="Image représentant Thanatos dans le jeux vidéo Hades">
+                    </div>
+                    <div id="box-thanatos" class="box-text-character">
+                        <h3 class="hades">thanatos</h3>
+                        <p class="text-right">
+                            Thanatos apparaît parfois au début de rencontres régulières et met Zagreus au défi de voir lequel d'entre eux peut abattre le plus de nuances. Il est immunisé contre les dégâts pendant le concours, mais ne ripostera pas s'il est frappé (il se plaindra simplement). Si Zagreus tue plus d'ennemis que Thanatos ou fait un total égal, il lui attribuera un Centaure Coeur en plus de la récompense habituelle.
+                        </p>
+                    </div>
+                </section>
+                <section class="section-character">
+                    <div id="box-magaera" class="box-text-character">
+                        <h3 class="hades">megaera</h3>
+                        <p class="text-left">
+                            Après la première défaite, Magaera rejoindra la Maison d'Hades en tant que personnage avec lequel on peut intéragir, bien qu'elle tente toujours d'empêcher Zagreus d'entrer dans Asphodel. On la trouvera en train de boire dans le salon de la Maison, mais seulement après une course dans la quelle elle a été vaincue. Si le salon n'a pas encore été rouvert, elle traînera plutôt dans le couloir, de l'autre côté de la porte de Zagreus, là où Nyx se tient habituellement.
+                        </p>
+                    </div>
+                    <div class="box-img-character">
+                        <img src="assets/img/Megaera.png" alt="Image représentant Magaera dans le jeux vidéo Hades">
+                    </div>
+                </section>
+            </article>
+            <article>
+                <div class="box-title">
+                    <p class="title hades">les dieux de l'olympe</p>
+                </div>
+                <div class="box-gods-background">
+                    <div class="box-gods-relative">
+                        <div class="box-gods">
+                            <section>
+                                <p id="gods-athena" class="gods-name hades">athena</p>
+                                <img src="assets/img/Athena.png" alt="Image représentant Athena dans le jeux vidéo Hades">
+                                <div class="gods-text">
+                                    <p>
+                                        Athéna est la déesse olympienne de la sagesse et de la guerre stratégique. Elle offre des bénédictions à Zagreus qui permettent à ses capacités de dévier les attaques ennemies, une bénédiction pouvant réduire les dégâts ou augmenter d'autres options défensives.
+                                    </p>
+                                </div>
+                            </section>
+                            <section>
+                                <img src="assets/img/Zeus.png" alt="Image représentant Zeux dans le jeux vidéo Hades">
+                                <p id="gods-zeus" class="gods-name hades">zeus</p>
+                                <div class="gods-text">
+                                    <p>
+                                        Zeus est le dieu du ciel et du tonnerre, et le chef des dieux de l'Olympe. Il offre des bénédictions à Zagreus qui lui donnent des capacités de foudre en chaîne ou de foudroiement.
+                                    </p>
+                                </div>
+                            </section>
+                            <section>
+                                <img src="assets/img/Artemis.png" alt="Image représentant Artemis dans le jeux vidéo Hades">
+                                <p id="gods-arthemis" class="gods-name hades">arthemis</p>
+                                <div class="gods-text">
+                                    <p>
+                                        Artémis est la déesse olympienne de la chasse et de la nature sauvage. Elle offre des bénédictions à Zagreus qui donnent à ses capacités la possibilité d'infliger des dégâts critiques. En outre, elle offre également des bénédictions qui améliorent les capacités de Cast.
+                                    </p>
+                                </div>
+                            </section>
+                            <section>
+                                <img src="assets/img/Demeter.png" alt="Image représentant Demeter dans le jeux vidéo Hades">
+                                <p id="gods-demeter" class="gods-name hades">demeter</p>
+                                <div class="gods-text">
+                                    <p>
+                                        Déméter est la déesse de l'agriculture, de la loi sacrée et du cycle de la vie et de la mort, celle qui donne la vie et qui la reprend.
+                                    </p>
+                                </div>
+                            </section>
+                            <section>
+                                <img src="assets/img/Poseidon.png" class="god-poseidon" alt="Image représentant Poseidon dans le jeux vidéo Hades">
+                                <p id="gods-poseidon" class="gods-name hades">poseidon</p>
+                                <div class="gods-text">
+                                    <p>
+                                        Poséidon est le dieu de la mer. Il offre des bénédictions à Zagreus qui augmentent de manière significative les dégâts de ses capacités, et qui font que ses capacités infligent un Knockback.
+                                    </p>
+                                </div>
+                            </section>
+                            <section>
+                                <img src="assets/img/Ares.png" alt="Image représentant Ares dans le jeux vidéo Hades">
+                                <p id="gods-ares" class="gods-name hades">ares</p>
+                                <div class="gods-text">
+                                    <p>
+                                        Arès est le dieu olympien de la guerre. Contrairement à Athéna, plus orientée vers la stratégie, le domaine d'Arès est celui des aspects physiques, violents et indomptés de la guerre.
+                                    </p>
+                                </div>
+                            </section>    
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </body>
+</html>
