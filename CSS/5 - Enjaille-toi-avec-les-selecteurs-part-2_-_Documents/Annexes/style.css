@@ -1,0 +1,6 @@
+body>h2 {text-align: center;}
+section h2:first-child, p:nth-child(2), article~p {color: red;}
+section h2:last-child {color: green;}
+div p, article :nth-child(1) {color: blue;}
+article~p {font-weight: bold;}
+body p span:first-child:hover {color: blue;}

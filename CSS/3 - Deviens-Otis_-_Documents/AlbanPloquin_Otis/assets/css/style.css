@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700');
+@font-face {
+    font-family: 'BerthaMelanie';
+    src: url("../fonts/BerthaMelanie.ttf");
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {text-shadow: 2px 5px 0px #CE62BB;}
+.maj {text-transform: uppercase;}
+.italique{font-style: italic;}
+h2 {
+    color: #CE62BB;
+    text-shadow: 2px 5px 0px #111;
+    font-family: fantasy;
+}
+.fontface {
+    color: red;
+    font-family: 'BerthaMelanie';
+}
+.fontface .under {text-decoration: underline;}
+h3 {
+    color: green;
+    text-transform: capitalize;
+}
+.googlefont {
+    color: blue;
+    font-family: 'Roboto', sans-serif;
+}
+.googlefont .bold {
+    font-weight: 700;
+    font-size: 30px;
+}

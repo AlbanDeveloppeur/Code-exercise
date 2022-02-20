@@ -1,0 +1,21 @@
+html {margin: 0; padding: 0;}
+body {background: fixed border-box no-repeat url("../img/wallpaper.jpg");}
+main {
+    display: grid;
+    grid-template: 1fr / 20% 60% 20%;
+    align-items: center;
+}
+div {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+}
+div img {width: 100%;}
+.green {background-color: rgba(52, 235, 103, 0.5);}
+.blue {background-color: rgba(52, 95, 235, 0.5);}
+.border {border-radius: 10px;}
+.article-grid {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    justify-items: center;
+}

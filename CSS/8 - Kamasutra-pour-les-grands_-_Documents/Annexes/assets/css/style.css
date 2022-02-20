@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'PokemonHollow';
+    src: url("../font/PokemonHollow.ttf");
+}
+body {
+    width: 70%;
+    height: 90%;
+    margin: auto;
+}
+header {background-color: yellow;}
+h1 {
+    color: blue;
+    font-family: 'PokemonHollow';
+    text-align: center;
+    font-size: 5em;
+    margin-bottom: 0;
+}
+main {
+    position: relative;
+}
+#background{
+    width: 100%;
+}
+#magicarpe {
+    top: 550px;
+    left: 150px;
+    width: 13%;
+}
+#leviator {
+    top: 270px;
+    left: 430px;
+    width: 20%;
+}
+#mega-leviator {
+    top: -100px;
+    right: -100px;
+    width: 50%;
+}
+.absolute {position: absolute;}

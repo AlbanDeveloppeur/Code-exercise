@@ -1,0 +1,11 @@
+.inline {display: inline;}
+.box {
+    width: 100px;
+    height: 100px;
+}
+.red {background: red;}
+.green {background: green;}
+.blue {background: blue;}
+.d-inline {display: inline-block;}
+.right {float: right;}
+.left {float: left;}

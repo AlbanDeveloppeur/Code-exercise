@@ -1,0 +1,64 @@
+.container {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.rounded {
+    border-radius: 50%;
+}
+
+.big-square {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.flex {
+    display: flex;
+}
+
+.red {
+    background-color: red;
+    transform: scale(150%) translate(130px, 200px);
+}
+
+.yellow {
+    background-color: yellow;
+    transform: translateX(500px);
+}
+
+.green {
+    background-color: green;
+    transform: rotate(45deg) translate(80px, 80px);
+}
+
+.blue {
+    background-color: blue;
+    transform: skew(10deg, 20deg);
+}
+
+.purple {
+    background-color: purple;
+}
+
+.purple:nth-child(1) {
+    transform: translate(-50px, -50px);
+}
+.purple:nth-child(2) {
+    transform: translate(-50px, 50px);
+}
+.purple:nth-child(3) {
+    transform: translate(150px, -50px);
+}
+.purple:nth-child(4) {
+    transform: translate(150px, -360px);
+}
+.purple:nth-child(5) {
+    transform: translate(50px, -360px);
+}

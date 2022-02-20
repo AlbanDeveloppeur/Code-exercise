@@ -1,0 +1,36 @@
+h1 {position: relative;}
+h2, h3 {
+    position: absolute;
+    top: -500px;
+}
+.square {
+    width: 300px;
+    height: 150px;
+    border: 1px solid black;
+}
+.blue {background: blue;}
+.green {background: green;}
+.red {background: red;}
+.inline {display: inline-block;}
+
+@media (max-width: 950px) {
+    h1 {top: -500px;}
+    h2 {top: 10px}
+    .green, .blue {position: absolute;}
+    .blue {top: 500px;}
+    .green {
+        top: 300px;
+        right: 0px;
+    }
+}
+
+@media (max-width: 500px) {
+    h2 {top: -500px;}
+    h3 {top: 10px;}
+    .square {width: 150px;}
+    .blue {top: inherit;}
+    .green {
+        top: 150px;
+        left: 80px;
+    }
+}
