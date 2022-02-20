@@ -1,0 +1,96 @@
+<!-- 
+    1. Monsieur ou Madame
+    2. Require > Nom - Prenom - Mail - Select 1 - Select 2
+    3. Placeholder
+    4. Champ mail
+    5. Champ mot de passe
+    6. Select 1 : 
+        Défaut (pas selectionnable) => Choisissez une option
+        Option 1 => Développement
+        Option 2 => Design
+        Option 3 => Marketing
+    6. Select 2 : 
+        Défaut (pas selectionnable) => Choisissez une option
+        Thème 1 => fps et shoot
+        Thème 1 Option 1 => Fortnite
+        Thème 1 Option 2 => CSGO
+        Thème 1 Option 3 => Valorant
+        Thème 2 => MOBA
+        Thème 2 Option 1 => League of Legends
+        Thème 2 Option 2 => DOTA 2
+        Option 1 => Autre
+    7. Envoie : vérifie si tout les champs remplie
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Les attributs !</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <form action="" method="GET">
+            <fieldset>
+                <legend>Je m'inscrit à l'EGS</legend> 
+
+                <div class="div-radio">
+                    <input type="radio" name="input_radio_genre" id="radio-monsieur">
+                    <label for="radio-monsieur">M.</label>
+                    <input type="radio" name="input_radio_genre" id="radio-madame">
+                    <label for="radio-madame">Mme.</label>
+                </div>
+
+                <div class="div-input">
+                    <label for="text-prenom">Entrez votre prénom *</label>
+                    <input type="text" name="input_text_prenom" id="text-prenom" placeholder="Prénom" required>
+                </div>
+                <div class="div-input">
+                    <label for="text-nom">Entrez votre nom *</label>
+                    <input type="text" name="input_text_nom" id="text-nom" placeholder="Nom" required>
+                </div>
+                <div class="div-input">
+                    <label for="email-mail">Entrez votre adresse mail *</label>
+                    <input type="email" name="input_email_mail" id="email-mail" placeholder="abc@gmail.com" required>
+                </div>
+                <div class="div-input">
+                    <label for="password_motDePasse">Entrez votre mot de passe</label>
+                    <input type="password" name="input_password_motDePasse" id="password_motDePasse" placeholder="Mot de passe">
+                </div>
+                <div class="div-input">
+                    <label for="select-choixFiliere">Vous voulez vous inscrire en... *</label>
+                    <select name="select_choixFiliere" id="select-choixFiliere" required>
+                        <option value="" selected disabled>Choisissez une option...</option>
+                        <option value="developpement">Développement</option>
+                        <option value="design">Design</option>
+                        <option value="marketing">Marketing</option>
+                    </select>
+                </div>
+                <div class="div-input">
+                    <label for="select-choixFiliere">Vous êtes une bête sur... *</label>
+                    <select name="select_choixFiliere" id="select-choixFiliere" required>
+                        <option value="" selected disabled>Choisissez une option...</option>
+                        <optgroup label="fps et shoot">
+                            <option value="fortnite">Fortnite</option>
+                            <option value="csgo">CSGO</option>
+                            <option value="valorant">Valorant</option>
+                        </optgroup>
+                        <optgroup label="MOBA">
+                            <option value="lol">League of Legends</option>
+                            <option value="dota_deux">DOTA 2</option>
+                        </optgroup>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+                <div class="div-input">
+                    <label for="text-autre">Si autre, veuillez indiquer votre jeu ci-dessous :</label>
+                    <input type="text" name="input_text_autre" id="text-autre" placeholder="Votre jeu">
+                </div>
+                <button type="submit">Envoyez ma candidature</button>
+            </fieldset>
+        </form>
+    </body>
+</html>

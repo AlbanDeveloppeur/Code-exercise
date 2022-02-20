@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    background: rgb(1, 1, 33);
+    background: linear-gradient(150deg, rgba(1,1,33,1) 55%, rgba(234,26,169,1) 90%);
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+header {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+main {
+    width: 100%;
+}
+
+.question {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.question h2 {
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: left;
+}
+
+ul {
+    display: block;
+    width: 100%;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+li {
+    height: 25%;
+    border-bottom: 1px solid grey;
+    display: flex;
+    align-items: center;
+}
+
+li input {
+    margin-left: 20px;
+}
+
+li:nth-child(4) {
+    border-bottom: 0;
+}
+
+li input[type="radio"] {
+    background-color: yellow;
+    border: 1px solid #111;
+}
+
+li label{
+    color: black;
+    padding-left: 10px;
+    font-size: 1.3em;
+}
+
+.end {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.end button {
+    background-color: rgba(240, 27, 172, 1);
+    color: #fff;
+    border-radius: 3px;
+    border: 0;
+    font-size: 1.5em;
+    width: 100%;
+    padding: 20px 0;
+}
+
+#modal {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #111;
+}
+
+#modal p {
+    font-size: 1.5em;
+}
+
+#modal .commentaire {
+    margin-top: 10px;
+}
