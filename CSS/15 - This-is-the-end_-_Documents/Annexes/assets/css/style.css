@@ -71,10 +71,14 @@ nav {
 nav .logo {
     width: 300px;
     margin-left: 50px;
+    position: relative;
+    z-index: 90;
 }
 .burger {   
     margin: 25px 50px 0 0;
     cursor: pointer;
+    position: relative;
+    z-index: 90;
 }
 .burger-line {
     width: 50px;
@@ -103,39 +107,34 @@ nav .logo {
     width: 42px;
 }
 .menu-box {
-    height: 100vh;
+    height: calc(100vh - 100px);
     width: 100%;
     background: rgb(201, 160, 2);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 50;
+    transform: translateY(-46px);
+    display: grid;
+    place-items: center;
     overflow: hidden;
+    z-index: 50;
 }
 .menu-box ul {
     width: 50%;
-    margin: 0 auto;
 }
 .menu-box ul li {
     text-align: center;
 }
-.menu-box ul li:after {
-    content: "";
-    background-image: url(../img/zagreus.png);
-    background-repeat: no-repeat;
-    background-size: 100px 100%;
-    display: inline-block;
-    height: 100px;
-    width: 100%;
-    position: relative;
-    top: 50px;
+.menu-box ul li .menu-zagreus:before {
+    content: "coucou";
+}
+.menu-box ul li .menu-zeus:after {
+    content: url(../img/Zeus.png);
 }
 .menu-box ul li img {
-    height: 150px;
+    width: 150px;
     border-radius: 40%;
 }
 .menu-box ul li p {
     font-size: 1.8em;
+    margin: auto
 }
 .burger:hover + div.menu-box {
     animation: burger-menu-animation 1s ease-out forwards;
