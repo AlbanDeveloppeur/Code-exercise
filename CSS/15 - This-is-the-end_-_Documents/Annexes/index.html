@@ -21,35 +21,29 @@
     <body>
         <header>
             <nav>
-                <img class="logo left" src="assets/img/logo.png" alt="Logo du jeux vidéo Hades">
-                <div class="burger right">
+                <img class="logo relative" src="assets/img/logo.png" alt="Logo du jeux vidéo Hades">
+                <div class="burger absolute">
                     <div class="burger-line line-one"></div>
                     <div class="burger-line line-two"></div>
                     <div class="burger-line line-three"></div>
                 </div>
-                <div class="clear"></div>
                 <div class="menu-box">
                     <ul>
                         <li>
-                            <!-- <img src="assets/img/zagreus.png" alt=""> -->
                             <a href="#" class="menu-zagreus hades">zagreus</a>
                         </li>
                         <li>
                             <a href="#" class="menu-zeus hades">zeus</a>
-                            <!-- <img src="assets/img/Zeus.png" alt=""> -->
                         </li>
                         <li>
-                            <!-- <img src="assets/img/Thanatos.png" alt=""> -->
                             <a href="#" class="menu-thanatos hades">thanatos</a>
                         </li>
                         <li>                        
                             <a href="#" class="menu-megaera hades">megaera</a>
-                            <!-- <img src="assets/img/Megaera.png" alt=""> -->
                         </li>
                     </ul>
                 </div>
             </nav>
-            <img id="wallpaper" src="assets/img/wall.jpg" alt="">
         </header>
 
         <main>
@@ -57,7 +51,7 @@
                 <div class="box-title">
                     <p class="title hades">les personnages</p>
                 </div>
-                <section class="section-character">
+                <section class="section-character flex">
                     <div class="box-img-character">
                         <img src="assets/img/zagreus.png" alt="Image représentant Zagreus dans le jeux vidéo Hades">
                     </div>
@@ -68,7 +62,7 @@
                         </p>
                     </div>
                 </section>
-                <section class="section-character">
+                <section class="section-character flex">
                     <div id="box-hades" class="box-text-character">
                         <h3 class="hades">hades</h3>
                         <p class="text-left">
@@ -79,7 +73,7 @@
                         <img src="assets/img/hades.png" alt="Image représentant Hades dans le jeux vidéo Hades">
                     </div>
                 </section>
-                <section class="section-character">
+                <section class="section-character flex">
                     <div class="box-img-character">
                         <img src="assets/img/Thanatos.png" alt="Image représentant Thanatos dans le jeux vidéo Hades">
                     </div>
@@ -90,25 +84,25 @@
                         </p>
                     </div>
                 </section>
-                <section class="section-character">
+                <section class="section-character flex">
                     <div id="box-magaera" class="box-text-character">
                         <h3 class="hades">megaera</h3>
                         <p class="text-left">
                             Après la première défaite, Magaera rejoindra la Maison d'Hades en tant que personnage avec lequel on peut intéragir, bien qu'elle tente toujours d'empêcher Zagreus d'entrer dans Asphodel. On la trouvera en train de boire dans le salon de la Maison, mais seulement après une course dans la quelle elle a été vaincue. Si le salon n'a pas encore été rouvert, elle traînera plutôt dans le couloir, de l'autre côté de la porte de Zagreus, là où Nyx se tient habituellement.
                         </p>
                     </div>
-                    <div class="box-img-character">
+                    <div class="box-img-character" id="box-img-magaera">
                         <img src="assets/img/Megaera.png" alt="Image représentant Magaera dans le jeux vidéo Hades">
                     </div>
                 </section>
             </article>
-            <article>
+            <article class="article-gods">
                 <div class="box-title">
                     <p class="title hades">les dieux de l'olympe</p>
                 </div>
                 <div class="box-gods-background">
-                    <div class="box-gods-relative">
-                        <div class="box-gods">
+                    <div class="box-gods-relative relative">
+                        <div class="box-gods flex">
                             <section>
                                 <p id="gods-athena" class="gods-name hades">athena</p>
                                 <img src="assets/img/Athena.png" alt="Image représentant Athena dans le jeux vidéo Hades">
