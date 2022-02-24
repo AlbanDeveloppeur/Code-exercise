@@ -101,7 +101,7 @@ nav .logo {
     z-index: 50;
     transition: height 1s;
 }
-.burger:hover + div.menu-box {
+.burger:hover + .menu-box {
     height: calc(100vh - 100px);
     transition: all 0.8s ease-out;
 }
@@ -245,7 +245,7 @@ nav .logo {
 }
 .box-gods section .gods-name {
     width: 50%;
-    font-size: 2.8em;
+    font-size: 2.5em;
     border-radius: 20px;
     padding: 2px 0;
     background: red;
@@ -264,10 +264,10 @@ nav .logo {
     z-index: 25;
 }
 .gods-text p {
+    width: 70%;
     font-family: arial;
     text-align: center;
     color: #fff;
-    font-size: 0.9em;
     position: absolute;
     top: 50%;
     left: 50%;
