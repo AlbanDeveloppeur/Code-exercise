@@ -1,0 +1,67 @@
+- Nouvelle façon d'écrire les routes :
+avant ->
+	/**
+	*@Route('/route', name="route")
+	**/
+
+après ->
+	#[Route("/route", name="route")]
+
+
+- Nouvelle manière d'écrire "__construct" :
+avant ->
+	public $var
+	
+	public function __construct(
+		float $var = 0
+	)
+	{
+		$this->var = $var;
+	}
+
+après ->
+	public function __construct (
+		public float $var = 0
+	) {}
+
+
+- Nouvelle insctruction pour remplacer "switch" :
+avant ->
+	switch($var) {
+		case $var = 1 :
+			$result = "true";
+			break;
+		case $var = 0 :
+			$result = "false";
+			break;
+	}
+	
+	echo $result;
+
+après ->
+	echo match ($var) {
+		$var = 1 => "true",
+		$var = 0 => "false"
+	};
+
+
+- Nouvelle opérateur "Nullsafe", pour éviter les vérifications conditionnelles de null. S'arrête dès qu'une des varriable envoyé est null :
+avant ->
+	$var =  null;
+
+	if ($session !== null) {
+  		$user = $session->user;
+
+  		if ($user !== null) {
+    			$address = $user->getAddress();
+ 
+    			if ($address !== null) {
+      				$var = $address->country;
+    			}
+  		}
+	}
+
+après ->
+	$var= $session?->user?->getAddress()?->country;
+
+
