@@ -9,35 +9,67 @@
     </head>
 
     <body>
-        <header>
+        <header id="home">
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Cities Building</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Social Network</a></li>
+                    <a href="#home">
+                        <li>Home</li>
+                    </a>
+                    <a href="#cities">
+                        <li>Cities Building</li>
+                    </a>
+                    <a href="#contact">
+                        <li>Contact</li>
+                    </a>
+                    <a href="#social">
+                        <li>Social Network</li>
+                    </a>
                 </ul>
             </nav>
-            <h1><span>C&O</span> Architects</h1>
+            <div>
+                <h1><span>C&O</span><br>Architects</h1>
+            </div>
         </header>
 
         <main>
-            <section>
+            <section id="cities">
                 <nav>
                     <ul>
-                        <li>Paris</li>
-                        <li>Living</li>
-                        <li>Work</li>
-                        <li>Building style</li>
-                        <li>Sydney</li>
-                        <li>Dubaï</li>
-                        <li>New York</li>
+                        <div class="nav-box nav-box-left">
+                            <li id="living">
+                                <img src="assets/images/building9.jpg" alt="">
+                            </li>
+                            <li id="paris">
+                                <img src="assets/images/building7.jpg" alt="">
+                            </li>
+                        </div>
+                        <div class="nav-box nav-box-center">
+                            <div>
+                                <li id="work">
+                                    <img src="assets/images/building10.jpg" alt="">
+                                </li>
+                                <li id="sydney">
+                                    <img src="assets/images/building6.jpg" alt="">
+                                </li>
+                            </div>
+                            <li id="building-style">
+                                <img src="assets/images/building5.jpg" alt="">
+                            </li>
+                        </div>
+                        <div class="nav-box nav-box-right">
+                            <li id="dubai">
+                                <img src="assets/images/building8.jpg" alt="">
+                            </li>
+                            <li id="new-york">
+                                <img src="assets/images/building11.jpg" alt="">
+                            </li>
+                        </div>
                     </ul>
                 </nav>
                 <h2>Cities Bui  lding</h2>
             </section>
 
-            <section>
+            <section id="contact">
                 <h2>Contact Us</h2>
                 <form>
                     <div>
@@ -61,7 +93,7 @@
                 </form>
             </section>
 
-            <section>
+            <section id="social">
                 <iframe src="#">video</iframe>
                 <div>
                     <p>Follow us here :</p>
