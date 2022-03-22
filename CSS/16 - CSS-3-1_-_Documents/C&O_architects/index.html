@@ -33,71 +33,56 @@
 
         <main>
             <section id="cities">
-                <nav>
-                    <ul>
-                        <div class="nav-box nav-box-left">
-                            <li id="living">
-                                <img src="assets/images/building9.jpg" alt="">
-                                <p>Living</p>
-                            </li>
-                            <li id="paris">
-                                <img src="assets/images/building7.jpg" alt="">
-                                <p>Paris</p>
-                            </li>
+                <div class="grid">
+                    <div class="parent">
+                        <div class="parent-div div1" id="living">
+                            <p>Living</p>
                         </div>
-                        <div class="nav-box nav-box-center">
-                            <div>
-                                <li id="work">
-                                    <img src="assets/images/building10.jpg" alt="">
-                                    <p>Work</p>
-                                </li>
-                                <li id="sydney">
-                                    <img src="assets/images/building6.jpg" alt="">
-                                    <p>Sydney</p>
-                                </li>
-                            </div>
-                            <li id="building-style">
-                                <img src="assets/images/building5.jpg" alt="">
-                                <p>Building style</p>
-                            </li>
+                        <div class="parent-div div2" id="paris">
+                            <p>Paris</p>
                         </div>
-                        <div class="nav-box nav-box-right">
-                            <li id="dubai">
-                                <img src="assets/images/building8.jpg" alt="">
-                                <p>Dubaï</p>
-                            </li>
-                            <li id="new-york">
-                                <img src="assets/images/building11.jpg" alt="">
-                                <p>New York</p>
-                            </li>
+                        <div class="parent-div div3" id="work">
+                            <p>Work</p>
                         </div>
-                    </ul>
-                </nav>
+                        <div class="parent-div div4" id="sydney">
+                            <p>Sydney</p>
+                        </div>
+                        <div class="parent-div div5" id="building-style">
+                            <p>Building Style</p>
+                        </div>
+                        <div class="parent-div div6" id="dubai">
+                            <p>Dubai</p>
+                        </div>
+                        <div class="parent-div div7" id="new-york">
+                            <p>New York</p>
+                        </div>
+                    </div>
+                </div>
                 <h2>Cities Building</h2>
             </section>
 
             <section id="contact">
-                <h2>Contact Us</h2>
-                <form>
-                    <div>
-                        <div>
+                <div class="absolute">
+                    <h2>Contact Us</h2>
+                    <form class="flex">
+                        <div class="input-box form-div-width-40">
                             <label for="name">Enter your name</label>
                             <input type="text" name="input-name" id="name" placeholder="Name">
                         </div>
-                        <div>
+                        <div class="input-box form-div-width-40">
                             <label for="firstname">Enter your firstname</label>
                             <input type="text" name="input-firstname" id="firstname" placeholder="Firstname">
                         </div>
-                    </div>
-                    <div>
-                        <label for="email">Enter your email</label>
-                        <input type="mail" name="input-email" id="email" placeholder="Mail@mail.com">
-                    </div>
-                    <div>
-                        <label for="message">What can we do together ?</label>
-                        <textarea name="input-message" id="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
-                    </div>
-                </form>
+                        <div class="input-box form-div-width-100">
+                            <label for="email">Enter your email</label>
+                            <input type="mail" name="input-email" id="email" placeholder="Mail@mail.com">
+                        </div>
+                        <div class="input-box form-div-width-100">
+                            <label for="message">What can we do together ?</label>
+                            <textarea name="input-message" id="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
+                        </div>
+                    </form>
+                </div>
             </section>
 
             <section id="social">
