@@ -1,21 +1,17 @@
 const body = document.body;
 
-let nbr_default = 15;
-let nbr = 0;
+let nbr_default = 100;
 
 for (let i = 1; i <= nbr_default; i++) {
-    let new_p = document.createElement('p');
-    
-    nbr = i;
+    const new_p = document.createElement('p');
+    let nbr = i;
 
-    if ((nbr % 3) == 0) {
-        nbr = "Fizz"
-    }
-    if ((nbr % 5) == 0) {
-        nbr = "Buzz";
-    }
-    if ((nbr % 3) == 0 && (nbr % 5) == 0) {
+    if (!(nbr % 3) && !(nbr % 5)) {
         nbr = "FizzBuzz"; 
+    } else if (!(nbr % 3)) {
+        nbr = "Fizz"
+    } else if (!(nbr % 5)) {
+        nbr = "Buzz";
     }
     
     new_p.textContent = nbr;
