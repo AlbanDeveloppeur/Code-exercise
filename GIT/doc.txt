@@ -1,0 +1,4 @@
+git checkout -b "branche" > créer une nouvelle branche et rentre dedans
+pull request > envoie une demande de pull
+
+use Gitlab
