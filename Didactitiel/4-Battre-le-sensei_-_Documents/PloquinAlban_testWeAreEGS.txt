@@ -1,0 +1,13 @@
+n est égale à 100
+
+SI n est un multiple de 3 et de 5
+ALORS
+   ECRIRE We are EGS
+SINON SI n est un multiple de 3
+ALORS
+   ECRIRE We are
+SINON SI n est un multiple de 5
+ALORS
+   ECRIRE EGS
+SINON
+   ECRIRE n
