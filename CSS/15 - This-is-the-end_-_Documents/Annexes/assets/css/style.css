@@ -119,6 +119,10 @@ nav .logo {
     position: relative;
     padding: 50px;
 }
+.menu-box ul li a {
+    font-size: 1.8em;
+    margin: auto;
+}
 .menu-box ul li a:after {
     content: "";
     width: 150px;
@@ -144,10 +148,6 @@ nav .logo {
 .menu-box ul li .menu-megaera:after {
     background-image: url("../img/Megaera.png");
     right: 0;
-}
-.menu-box ul li a {
-    font-size: 1.8em;
-    margin: auto;
 }
 
 /* LES PERSONNAGES */

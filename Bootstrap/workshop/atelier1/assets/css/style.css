@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li a,
+h1 {
+    color: #fff
+}
+
+header {
+    height: 100vh;
+    background: url("../images/babymetal-wallpaper-preview.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+button {
+    background: deeppink !important;
+    width: 100%;
+    font-size: 3rem !important;
+    border: 2px solid cyan !important;
+    color: cyan !important;
+}
+footer span,
+footer a {
+    font-size: 3rem;
+    color: #fff;
+}
+footer .up {
+    font-size: 6rem;
+}
