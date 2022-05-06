@@ -32,8 +32,43 @@
 /* HTML */
 html{ scroll-behavior: smooth; }
 
-/* HEADER */
+/* MENU */
+#menu {
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+}
+#menu nav {
+    height: 100%;
+    background: var(--background-nav);
+    backdrop-filter: blur(10px);
+    clip-path: polygon(0 0, 60% 0%, 100% 50%, 60% 100%, 0% 100%);
+}
+#menu nav ul {
+    height: 100%;
+    margin: 0 50px 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#menu nav ul a li {
+    border: 2px solid var(--white);
+    width: 150px;
+    padding: 15px 0;
+    margin: 20px 50px 20px 10px;
+    text-align: center;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+#menu nav ul a li {
+    font-size: 1.5rem;
+}
+#menu nav ul a li:hover {
+    background: var(--white-hover);
+    color: var(--white);
+}
 
+/* HEADER */
 header {
     min-height: 100vh;
     background-image: url("../images/building.jpeg");
@@ -43,47 +78,16 @@ header {
     background-size: cover;
     background-blend-mode: hard-light;
     display: flex;
-}
-header nav {
-    height: 100%;
-    position: fixed;
-    background: var(--background-nav);
-    backdrop-filter: blur(10px);
-    clip-path: polygon(0 0, 60% 0%, 100% 50%, 60% 100%, 0% 100%);
-    z-index: 100;
-}
-header nav ul {
-    height: 100%;
-    margin: 0 50px 0 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-header nav ul a li {
-    border: 2px solid var(--white);
-    width: 150px;
-    padding: 15px 0;
-    margin: 20px 50px 20px 10px;
-    text-align: center;
-    transition: all 0.3s;
-    cursor: pointer;
-}
-header nav ul a li {
-    font-size: 1.5rem;
-}
-header nav ul a li:hover {
-    background: var(--white-hover);
-    color: var(--white);
+    justify-content: flex-end;
+    align-items: center;
 }
 header div {
-    border: 1px solid var(--white);
     margin-right: 100px;
-    padding: 50px 100px;
     text-align: center;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+}
+header div h1 {
+    border: 1px solid var(--white);
+    padding: 50px 100px;
 }
 header div h1,
 header div span {
@@ -96,7 +100,6 @@ header div span {
 }
 
 /* CITIES */
-
 #cities {
     min-height: 100vh;
     background: url(../images/building2.jpg);
