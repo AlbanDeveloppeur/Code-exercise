@@ -1,0 +1,63 @@
+.container .red-box, .container .title-box .red-box, .container .orange-box, .container .title-box .orange-box, .container .green-box, .container .title-box .green-box {
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.container .title-box .orange-box, .container .title-box .green-box {
+  font-size: 2rem;
+  margin-left: 20px;
+}
+
+.container .orange-box, .container .green-box {
+  font-size: 0.9rem;
+  margin: 10px;
+}
+
+.container .green-box, .container .title-box .green-box {
+  background-color: #45cb66;
+}
+
+.container .orange-box, .container .title-box .orange-box {
+  background-color: #f1c42e;
+}
+
+.container .red-box, .container .title-box .red-box {
+  background-color: #f25763;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgray;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+.container .title-box {
+  display: flex;
+  align-items: center;
+}
+.container .title-box .red-box {
+  margin-left: 20px;
+  font-size: 2.5rem;
+  color: #111;
+}
+.container .red-box {
+  margin: 10px;
+  color: #111;
+  font-size: 1.2rem;
+}
+
+/*# sourceMappingURL=style.css.map */

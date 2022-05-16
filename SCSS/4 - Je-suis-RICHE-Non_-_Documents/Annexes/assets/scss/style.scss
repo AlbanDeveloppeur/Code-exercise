@@ -1,0 +1,83 @@
+// Variable
+$white: #fff;
+$black: #111;
+$green: #45cb66;
+$orange: #f1c42e;
+$red: #f25763;
+
+// Shadow class
+%boxBorder{
+    border: 2px solid $white;
+    color: $white;
+    padding: 5px 10px;
+}
+%globalTitleBox {
+    font-size: 2rem;
+    margin-left: 20px;
+}
+%globalTextBox {
+    font-size: 0.9rem;
+    margin: 10px
+}
+%greenBox {
+    @extend %boxBorder;
+    background-color: $green;
+}
+%orangeBox {
+    @extend %boxBorder;
+    background-color: $orange;
+}
+%redBox {
+    @extend %boxBorder;
+    background-color: $red;
+}
+
+// CSS
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {background-color: lightgray;}
+h1 {
+    text-align: center;
+    color: $white;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    
+    .title-box {
+        display: flex;
+        align-items: center;
+
+        .green-box {
+            @extend %greenBox;
+            @extend %globalTitleBox;
+        }
+        .orange-box {
+            @extend %orangeBox;
+            @extend %globalTitleBox;
+        }
+        .red-box {
+            @extend %redBox;
+            margin-left: 20px;
+            font-size: 2.5rem;
+            color: $black;
+        }
+    }
+    .green-box {
+        @extend %greenBox;
+        @extend %globalTextBox;
+    }
+    .orange-box {
+        @extend %orangeBox;
+        @extend %globalTextBox;
+    }
+    .red-box {
+        @extend %redBox;
+        margin: 10px;
+        color: $black;
+        font-size: 1.2rem;
+    }
+}

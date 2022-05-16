@@ -3,9 +3,9 @@
 $noir: rgb(39,38,46);
 $violet: rgb(86,63,139);
 $rose : rgb(191,187,201);
+$blanc : #fff;
 $rbt: "Roboto";
 $rbtm: "Roboto Mono";
-
 
 * {
     margin: 0;
@@ -23,13 +23,11 @@ header {
     .logo {
         width: 50px;
 
-        img {
-            width: 100%;
-        }
+        img { width: 100%; }
     }
 
     div a {
-        color: #fff;
+        color: $blanc;
         text-decoration: none;
         margin: 20px;
         font-size: 18px;
@@ -38,11 +36,14 @@ header {
 
 main {
     text-align: center;
+    margin-bottom: 50px;
 
     h1 {
         font-family: $rbt, sans-serif;
         font-weight: 400;
+        font-size: 2.8rem;
         margin: 30px;
+        color: $violet;
     }
 
     section {
@@ -51,19 +52,78 @@ main {
         display: flex;
         justify-content: space-between;
 
-        article:nth-child(odd) {
-            box-shadow: 4px 4px 0px 0px $violet;
-        }
-        article:nth-child(even) {
-            box-shadow: 4px 4px 0px 0px $rose;
-        }
-
         article {
             width: 300px;
+            height: 500px;
+            position: relative;
 
-            img {
-                width: 90%;
+            img { width: 90%; }
+        }
+        article .content-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            padding: 20px 10px;
+            z-index: -5;
+
+            
+            h3 { font-size: 2rem }
+            p{
+                text-align: left;
+                margin-top: 15px;
             }
         }
+        article .content-hover.rose {
+            background: $rose;
+
+            h3, p { color: $violet; }
+        }
+        article .content-hover.violet {
+            background: $violet;
+
+            h3, p { color: $rose; }
+        }
+        article:hover .content-hover { z-index: 5; }
+        .shadow {
+            height: 503px;
+            width: 303px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .shadow.violet {
+            background-color: $violet;
+            box-shadow: 2px 2px $violet;
+        }
+        .shadow.rose {
+            background-color: $rose;
+            box-shadow: 2px 2px $rose;
+        }
+        #img-1 {
+            background-image: url("../images/image_01.jpg");
+            background-size: cover;
+        }
+        #img-2 {
+            background-image: url("../images/image_02.jpg");
+            background-size: cover;
+        }
+        #img-3 {
+            background-image: url("../images/image_03.jpg");
+            background-size: cover;
+        }
+        #img-4 {
+            background-image: url("../images/image_04.jpg");
+            background-size: cover;
+        }
     }
+}
+
+footer {
+    background: $noir;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: $blanc;
 }
