@@ -1,0 +1,12 @@
+.blue-box {
+    background: $back_blue;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 25px 10px;
+
+    h4, p { color: $grey; }
+    p { 
+        font-size: 0.7rem;
+        margin-top: 15px; 
+    }
+}

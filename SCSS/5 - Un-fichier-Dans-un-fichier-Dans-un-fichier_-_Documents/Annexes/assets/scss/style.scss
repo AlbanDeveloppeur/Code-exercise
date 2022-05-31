@@ -1,0 +1,18 @@
+$roboto: "Roboto", sans-serif;
+$red: red;
+$grey: #a9a8b5;
+$back_blue: #151539;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $roboto;
+    width: 80%;
+    margin: 50px auto;
+}
+
+@import "index_01.scss";
+@import "index_02.scss";
