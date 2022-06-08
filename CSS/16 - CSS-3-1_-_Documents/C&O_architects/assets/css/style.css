@@ -4,7 +4,6 @@
 /* font-weight: Light 300 - Regular 400 - Bold 700 */
 
 /* RESET CSS */
-
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +16,6 @@
 }
 
 /* CSS VARIABLE */
-
 :root {
     --white: hsl(0, 100%, 100%);
     --black: hsl(0, 0, 0);
@@ -35,23 +33,20 @@ html{ scroll-behavior: smooth; }
 /* MENU */
 #menu {
     height: 100vh;
-    position: fixed;
-    z-index: 100;
-}
-#menu nav {
-    height: 100%;
     background: var(--background-nav);
     backdrop-filter: blur(10px);
     clip-path: polygon(0 0, 60% 0%, 100% 50%, 60% 100%, 0% 100%);
+    position: fixed;
+    z-index: 100;
 }
-#menu nav ul {
+#menu ul {
     height: 100%;
     margin: 0 50px 0 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-#menu nav ul a li {
+#menu ul a li {
     border: 2px solid var(--white);
     width: 150px;
     padding: 15px 0;
@@ -60,10 +55,10 @@ html{ scroll-behavior: smooth; }
     transition: all 0.3s;
     cursor: pointer;
 }
-#menu nav ul a li {
+#menu ul a li {
     font-size: 1.5rem;
 }
-#menu nav ul a li:hover {
+#menu ul a li:hover {
     background: var(--white-hover);
     color: var(--white);
 }
@@ -164,27 +159,13 @@ header div span {
 #cities .div5 { grid-area: 2 / 2 / 5 / 4; }
 #cities .div6 { grid-area: 1 / 4 / 3 / 5; }
 #cities .div7 { grid-area: 3 / 4 / 5 / 5; }
-#living { 
-    background-image: url("../images/building9.jpg");
-}
-#paris { 
-    background-image: url("../images/building7.jpg");
-}
-#work { 
-    background-image: url("../images/building10.jpg");
-}
-#sydney { 
-    background-image: url("../images/building6.jpg");
-}
-#building-style { 
-    background-image: url("../images/building5.jpg");
-}
-#dubai { 
-    background-image: url("../images/building8.jpg");
-}
-#new-york { 
-    background-image: url("../images/building11.jpg");
-}
+#living { background-image: url("../images/building9.jpg"); }
+#paris { background-image: url("../images/building7.jpg"); }
+#work { background-image: url("../images/building10.jpg"); }
+#sydney { background-image: url("../images/building6.jpg"); }
+#building-style { background-image: url("../images/building5.jpg"); }
+#dubai { background-image: url("../images/building8.jpg"); }
+#new-york { background-image: url("../images/building11.jpg"); }
 #cities h2 {
     font-size: 5rem;
     color: var(--white);
