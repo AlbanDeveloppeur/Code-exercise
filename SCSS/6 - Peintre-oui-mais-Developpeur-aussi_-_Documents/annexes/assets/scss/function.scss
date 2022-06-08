@@ -1,0 +1,49 @@
+@function randomRed() {
+    $red: random(256);
+
+    @return $red;
+}
+@function randomGreen() {
+    $green: random(256);
+
+    @return $green;
+}
+@function randomBlue() {
+    $blue: random(256);
+
+    @return $blue;
+}
+
+@function spinningBox() {
+    $deg: random(359);
+
+    @return $deg;
+}
+
+
+@each $box in "1", "2", "3" {
+    $currentColor: rgb(randomRed(), randomGreen(), randomBlue());
+    
+    #box-#{$box} {
+        background-color: $currentColor;
+        transform: rotate((spinningBox()) + deg);
+    }
+
+    @if (#{$box} == "1") {
+        header h1 {
+            color: darken($currentColor, 20%);
+        }
+        main article h2 {
+            color: lighten($currentColor, 20%);
+        }
+    }
+}
+
+@each $text in "1", "2", "3" {
+
+    #text-#{$text} {
+        font-size: $size+px;
+    }
+
+    $size : $size * 2;
+}
