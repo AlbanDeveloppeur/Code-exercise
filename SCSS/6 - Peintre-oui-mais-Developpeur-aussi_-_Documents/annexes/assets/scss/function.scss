@@ -40,7 +40,6 @@
 }
 
 @each $text in "1", "2", "3" {
-
     #text-#{$text} {
         font-size: $size+px;
     }
