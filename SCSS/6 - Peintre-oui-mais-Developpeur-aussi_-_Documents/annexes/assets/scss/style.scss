@@ -1,0 +1,35 @@
+@import "root.scss";
+@import "function.scss";
+
+body {
+    width: 80%;
+    margin: auto;
+    padding: 15px;
+
+    header {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+    .box-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 2px solid rgb(randomRed(), randomGreen(), randomBlue());
+        }
+    }
+
+    .text-content {
+        .text-content-title {
+            text-align: center;
+        }
+
+        article p {
+            margin-top: 20px;
+        }
+    }
+}
