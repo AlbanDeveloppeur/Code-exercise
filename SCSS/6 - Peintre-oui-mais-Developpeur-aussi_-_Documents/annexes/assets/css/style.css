@@ -9,26 +9,26 @@ section {
 }
 
 #box-1 {
-  background-color: rgb(236, 131, 56);
-  transform: rotate(330deg);
+  background-color: rgb(251, 87, 107);
+  transform: rotate(283deg);
 }
 
 header h1 {
-  color: #ad5211;
+  color: #e70521;
 }
 
 main article h2 {
-  color: #f5bd95;
+  color: #fdbbc3;
 }
 
 #box-2 {
-  background-color: rgb(154, 86, 82);
-  transform: rotate(202deg);
+  background-color: rgb(201, 16, 56);
+  transform: rotate(271deg);
 }
 
 #box-3 {
-  background-color: rgb(183, 198, 38);
-  transform: rotate(91deg);
+  background-color: rgb(177, 77, 14);
+  transform: rotate(134deg);
 }
 
 #text-1 {
@@ -60,7 +60,7 @@ body .box-content {
 body .box-content .box {
   width: 100px;
   height: 100px;
-  border: 2px solid rgb(84, 175, 219);
+  border: 2px solid rgb(197, 236, 214);
 }
 body .text-content .text-content-title {
   text-align: center;

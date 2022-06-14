@@ -15,7 +15,7 @@
 }
 
 @function spinningBox() {
-    $deg: random(359);
+    $deg: random(358);
 
     @return $deg;
 }
