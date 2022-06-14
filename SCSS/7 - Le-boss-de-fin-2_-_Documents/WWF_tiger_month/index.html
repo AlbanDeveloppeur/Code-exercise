@@ -1,6 +1,52 @@
 <!-- 
     Mobile First -> configue en mobile puis progressivement vers Ordinateur standard
-    /!\ Si la tablette est en mode portrait, un message devra être afficher pour 
+    /!\ Si la tablette est en mode portrait, un message devra être afficher pour demander à l'utilisateur de passé en mode paysage
     3 media queries
-        => 
-<!-- --> -->
+        => Taille pour téléphone : 0 - 719px
+        => Taille pour tablette : 720px - 1199px
+        => Taille pour ordinatteur : 1200px - max
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WWF - Le mois du Tigre</title>
+    <link rel="shortcut icon" href="assets/images/WWF-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-burger">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
+            <img src="assets/images/WWF-logo.png" alt="Le logo de la WWF représenté par un Panda">
+        </nav>
+
+        <section>
+            <h1>Le tigre de Birmanie</h1>
+            <div>
+                <input type="button" value="Voir le dossier complet">
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <article class="tiger-celebration-article">
+            <img src="assets/images/tigre2.jpg" alt="Une photo d'un tigre la gueule ouverte sur fond noir">
+            <div>
+                <h3>Célébration du mois du tigre à la WWF</h3>
+                <p>Les mois du tigre de terre commencent le jour du lichun ("établissement du printemps", entre le 2 et 5 février marquant le début du printemps en Chine) et se termine le jour précédant le jingzhe ("éveil de l'hibernation" entre le 5 et le 7 mars) des années aux tiges célestes yi et geng, soit tous les cinq ans.</p>
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>
