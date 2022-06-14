@@ -1,0 +1,90 @@
+@import "root.scss";
+@import "variables.scss";
+
+header {
+    min-height: 100vh;
+    background-image: url("../images/tigre.jpg");
+    background-position: 22% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+
+        .nav-burger {
+            width: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 20px;
+            cursor: pointer;
+
+            .burger-line {
+                display: block;
+                background-color: #fff;
+                height: 5px;
+                width: 100%;
+            }
+            .burger-line:first-of-type {
+                margin-bottom: $gap-line-burger
+            }
+            .burger-line:last-of-type {
+                margin-top: $gap-line-burger
+            }
+        }
+
+        img {
+            width: 40%;
+        }
+    }
+
+    section {
+        width: 100%;
+        height: 20%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 30px;
+
+        h1 {
+            color: $color-text-header;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+        input {
+            background-color: #000;
+            border: 2px solid #fff;
+            border-radius: 20px;
+            width: fit-content;
+            padding: 10px 15px;
+            color: $color-text-header;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+}
+
+main {
+    article {
+        padding: 30px;
+    }
+
+    .tiger-celebration-article {
+        img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        h3 {
+            margin-bottom: 10px;
+        }
+        p {
+            word-spacing: 5px;
+            letter-spacing: 1px;
+        }
+    }
+}
