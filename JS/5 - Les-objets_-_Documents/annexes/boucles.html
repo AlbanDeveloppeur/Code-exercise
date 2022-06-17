@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Objets</title>
+</head>
+
+<body>
+    <script>
+        const nombre = ["un", "deux", "trois"];
+        let cochon_un = {
+            "prenom" : "Fernand",
+            "caractere" : "Courageux",
+            "maison" : {
+                "fenetre" : "Non",
+                "matiere" : "Pailles",
+                "superficies" : "50m²"
+            }
+        },
+        cochon_deux = {
+            "prenom" : "Bernie",
+            "caractere" : "Brave",
+            "maison" : {
+                "fenetre" : "Oui",
+                "matiere" : "Bois",
+                "superficies" : "20m²"
+            }
+        },
+        cochon_trois = {
+            "prenom" : "José",
+            "caractere" : "Peureux",
+            "maison" : {
+                "fenetre" : "Oui",
+                "matiere" : "Briques",
+                "superficies" : "10m²"
+            }
+        };
+
+        for (let i = 0; i < nombre.length; i++) {
+            console.log(`****** Cochon ` + (i + 1) + ` ******`);
+            console.log(`Prenom : ${eval('cochon_' + nombre[i]).prenom}`);
+            console.log(`Caractère : ${eval('cochon_' + nombre[i]).caractere}`);
+            console.log(`Maison en : ${eval('cochon_' + nombre[i]).maison.matiere}`);
+            console.log(`Superficie de la maison : ${eval('cochon_' + nombre[i]).maison.superficies}`);
+            console.log(`Maison avec fenêtre ? ${eval('cochon_' + nombre[i]).maison.fenetre}`);
+
+            if (i < 2) {
+                console.log("")
+            }
+        }
+    </script>
+</body>
+
+</html>
