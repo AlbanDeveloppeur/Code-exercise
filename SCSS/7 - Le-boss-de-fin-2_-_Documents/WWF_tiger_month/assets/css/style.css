@@ -6,6 +6,22 @@
   font-family: "Urbanist", sans-serif;
 }
 
+main article, main section {
+  margin: 50px 0;
+}
+main article {
+  padding: 0 30px;
+}
+
+input {
+  border-radius: 50px;
+  padding: 13px 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0px 4px 7px -2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
 header {
   min-height: 100vh;
   background-image: url("../images/tigre.jpg");
@@ -20,10 +36,10 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 0px 15px;
 }
 header nav .nav-burger {
-  width: 60px;
+  width: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,17 +49,17 @@ header nav .nav-burger {
 header nav .nav-burger .burger-line {
   display: block;
   background-color: #fff;
-  height: 5px;
+  height: 4px;
   width: 100%;
 }
 header nav .nav-burger .burger-line:first-of-type {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 header nav .nav-burger .burger-line:last-of-type {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 header nav img {
-  width: 40%;
+  width: 35%;
 }
 header section {
   width: 100%;
@@ -55,32 +71,97 @@ header section {
 header section h1 {
   color: #fff;
   margin-bottom: 30px;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 header section input {
-  background-color: #000;
+  background-color: #111;
   border: 2px solid #fff;
-  border-radius: 20px;
-  width: fit-content;
-  padding: 10px 15px;
   color: #fff;
-  font-size: 1rem;
-  font-weight: 600;
 }
 
-main article {
-  padding: 30px;
-}
 main .tiger-celebration-article img {
   width: 100%;
   margin-bottom: 20px;
 }
 main .tiger-celebration-article h3 {
   margin-bottom: 10px;
+  font-size: 1rem;
 }
 main .tiger-celebration-article p {
   word-spacing: 5px;
-  letter-spacing: 1px;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+main .member-section {
+  background-color: #61ef7f;
+  text-align: center;
+  padding: 20px 0;
+}
+main .member-section img {
+  width: 80%;
+  padding-top: 50px;
+  filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.5));
+}
+main .member-section input {
+  margin-top: 20px;
+  width: 70%;
+  font-size: 1.2rem;
+  background-color: #5fafec;
+  border: 2px solid #fff;
+  color: #fffcfb;
+}
+main .diaporama-section {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/tigre4.jpg");
+  background-size: cover;
+  text-align: center;
+  padding: 220px 0;
+}
+main .diaporama-section input {
+  width: 70%;
+  background-color: #111;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+footer {
+  background-color: #333;
+  text-align: center;
+  padding: 50px 0;
+  width: 100%;
+}
+footer input {
+  background-color: #0e81f6;
+  border: 2px solid #0bf2e8;
+  color: #fff;
+  width: 60%;
+  font-size: 1.3rem;
+  padding: 8px 0px;
+  margin-bottom: 35px;
+}
+footer ul li {
+  list-style: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+footer .list-info-footer li {
+  margin: 15px;
+}
+footer .list-social-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto 0 auto;
+  width: 60%;
+}
+footer .list-social-footer li {
+  width: 50px;
+}
+footer .list-social-footer li img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

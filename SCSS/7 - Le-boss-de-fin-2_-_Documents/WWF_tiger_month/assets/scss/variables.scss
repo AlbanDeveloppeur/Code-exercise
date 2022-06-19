@@ -1,5 +1,27 @@
-// Header
-$color-text-header: #fff;
+// Input
+$color-box-shadow-input: rgba(0, 0, 0, 0.5);
 
+// -- Header --
+$color-text-header: #fff;
+$background-input-header: #111;
+$border-input-header: #fff;
     // Nav
-    $gap-line-burger: 20px;
+    $gap-line-burger: 15px;
+
+// -- Main --
+    // Member section
+    $background-member-section: #61ef7f;
+    $background-input-member-section: #5fafec;
+    $border-input-member-section: #fff;
+    $color-text-input-member-section: #fffcfb;
+
+    // Diaporama section
+    $background-input-diaporama-section: #111;
+    $border-input-diaporama-section: #fff;
+    $color-text-input-diaporama-section: #fff;
+
+// Footer
+$backgound-footer: #333;
+$background-input-footer: #0e81f6;
+$border-input-footer: #0bf2e8;
+$color-text-footer: #fff;
