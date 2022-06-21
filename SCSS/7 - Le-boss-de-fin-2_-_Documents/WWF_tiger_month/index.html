@@ -4,7 +4,7 @@
     3 media queries
         => Taille pour téléphone : 0 - 719px
         => Taille pour tablette : 720px - 1199px
-        => Taille pour ordinatteur : 1200px - max
+        => Taille pour ordinatteur : 1200px - infini
 -->
 
 <!DOCTYPE html>
@@ -27,45 +27,82 @@
                 <div class="burger-line"></div>
                 <div class="burger-line"></div>
             </div>
-            <img src="assets/images/WWF-logo.png" alt="Le logo de la WWF représenté par un Panda">
+            <ul class="nav-desktop">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">La fondation</a></li>
+                <li><a href="#" class="selected">Nous aider</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <img src="assets/images/WWF-logo.png" alt="Le logo de la WWF représenté par un Panda.">
         </nav>
 
         <section>
             <h1>Le tigre de Birmanie</h1>
-            <div>
+            <div class="input-box-header">
                 <input type="button" value="Voir le dossier complet">
             </div>
+            <div class="text-box-header">
+                <p>Les combats qui font rage depuis un an dans l'extrême nord de la Birmanie font des victimes inattenues : des dizaines de tigres, qui survivent tant bien que mal dans la plus grande réserve au monde dédiée à leur protection, et située près des zones de combats</p>
+                <p>En 2010, la junte aujourd'hui dissoute avait étendu ce sanctuaire, qui atteint désormais près de 22.000 km² -- quasiment la taille d'Israël -- dans la vallée reculée de Hukaung. De 50 à 70 tigres y vivraient aujourd'hui.</p>
+            </div>
         </section>
+
+        <div class="tablet-portrait-mode">
+            <div>
+                <img src="assets/images/WWF-logo.png" alt="Le logo de la WWF représenté par un Panda.">
+            </div>
+            <h2>Passez votre tablette en mode paysage</h2>
+        </div>
     </header>
 
     <main>
         <article class="tiger-celebration-article">
-            <img src="assets/images/tigre2.jpg" alt="Une photo d'un tigre la gueule ouverte sur fond noir.">
-            <div>
+            <div class="img-box-tiger-celebration">
+                <img src="assets/images/tigre2.jpg" alt="Une photo d'un tigre la gueule ouverte sur fond noir.">
+            </div>
+            <div class="text-box-tiger-celebration">
                 <h3>Célébration du mois du tigre à la WWF</h3>
-                <p>Les mois du tigre de terre commencent le jour du lichun ("établissement du printemps", entre le 2 et 5 février marquant le début du printemps en Chine) et se termine le jour précédant le jingzhe ("éveil de l'hibernation" entre le 5 et le 7 mars) des années aux tiges célestes yi et geng, soit tous les cinq ans.</p>
+                <p>Les mois du tigre de terre commencent le jour du lichun ("établissement du printemps", entre le 2 et 5 février marquant le début du printemps en Chine) et se termine le jour précédant le jingzhe ("éveil de l'hibernation" entre le 5 et le 7 mars) des années aux tiges célestes yi et geng, soit tous les cinq ans. <span>Sont par exemple "mois du tigre de terre".</span></p>
+                <p class="tablet-text-tiger-celebration">À la tige céleste wu est associé le yàng et l'élément terre, et la branche terrestre yin, le yàng, l'élément bois, et le signe du tigre. Dans la symbolique des cinq éléments, le wuyin correspond donc au "bois qui détruit la terre".</p>
             </div>
         </article>
 
         <section class="member-section">
-            <div class="box-img">
+            <div class="img-box-member-section">
                 <img src="assets/images/tigre3.png" alt="Un tigre est posé sur le ventre l'air complentatif.">
             </div>
-            <input type="button" value="Devenir membre">
+            <div class="text-box-member-section">
+                <div class="top-text-member-section">
+                    <p>Aidez les tigres de Birmanie maintenant,</p>
+                    <p>Devenez membre annuel de la foncation WWF!</p>
+                </div>
+                <input type="button" value="Devenir membre">
+            </div>
         </section>
 
         <section class="diaporama-section">
-            <input type="button" value="Lancer le diaporama">
+            <div class="box-diaporama-section">
+                <div class="input-box-diaporama-section">
+                    <input type="button" value="Lancer le diaporama">
+                </div>
+                <div class="text-box-diaporama-section">
+                    <p>Découvrez notre sélection de photos sur le plus mystérieux des félins...</p>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <input type="button" value="Devenir membre">
-        <ul class="list-info-footer">
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Photographie</a></li>
-        </ul>
+        <div class="box-footer">
+            <div class="input-box-footer">
+                <input type="button" value="Devenir membre">
+            </div>
+            <ul class="list-info-footer">
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Photographie</a></li>
+            </ul>
+        </div>
         <ul class="list-social-footer">
             <li><a href="#"><img src="assets/images/facebook.png" alt="Le logo de Facebook"></a></li>
             <li><a href="#"><img src="assets/images/twitter.png" alt="Le logo de Twitter"></a></li>

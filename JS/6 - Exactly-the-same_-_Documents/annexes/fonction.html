@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Fonctions</title>
+</head>
+
+<body>
+    <script>
+        var i = 1
+
+        // Est ce que c'est la meilleure manière déclarer une fonction ?
+        const operation = (nombre_un, nombre_deux, diviseur) => {
+            let resultat = (nombre_un + nombre_deux) / diviseur;
+            
+            if (diviseur != 0) {
+                return `Le résultat de l'opération est : ${resultat}`;
+            } else {
+                return "Vous ne pouvez pas divisé un nombre par 0"
+            }
+        }
+
+        while (i <= 5) {
+            let nombre_un = prompt(`tour n°${i}\nEntrez un premier nombre :`),
+                nombre_deux = prompt(`tour n°${i}\nEntrez un deuxième nombre :`),
+                diviseur = prompt(`tour n°${i}\nEntrez le diviseur :`);
+                
+            alert(`tour n°${i}\n` + operation(parseInt(nombre_un), parseInt(nombre_deux), parseInt(diviseur)));
+
+            i++
+        }
+    </script>
+</body>
+
+</html>

@@ -20,8 +20,34 @@ $border-input-header: #fff;
     $border-input-diaporama-section: #fff;
     $color-text-input-diaporama-section: #fff;
 
-// Footer
+// -- Footer --
 $backgound-footer: #333;
 $background-input-footer: #0e81f6;
 $border-input-footer: #0bf2e8;
 $color-text-footer: #fff;
+
+// -- Media queries --
+$breakpoints: (
+    "tablet-up": 720px,
+    "tablet-down": 1199px,
+    "desktop-up": 1200px,
+);
+
+// media querie pour breakpoints min et max
+@mixin media-tablet($_keymin, $_keymax) {
+    @media screen and (min-width: map-get($breakpoints, $_keymin)) and (max-width: (map-get($breakpoints, $_keymax) - 1)) {
+        &{ @content; }
+    }
+}
+@mixin media-desktop($_key) {
+    @media screen and (min-width: map-get($breakpoints, $_key)) {
+        &{ @content; }
+    }
+}
+
+// media querie pour détécter si l'appareil est à mode paysage ou portrait
+@mixin portrait-rotation($_key) {
+    @media screen and (min-width: map-get($breakpoints, $_key)) and (orientation: portrait) {
+        &{ @content; }
+    }
+}
