@@ -30,6 +30,28 @@
 
     <img src="img/image1.jpeg" alt="mon Image"><img src="img/image2.jpeg" alt="mon Image"><img src="img/image3.jpeg" alt="mon Image"><img src="img/image4.jpeg" alt="mon Image"><img src="img/image5.jpeg" alt="mon Image">
 
+
+    <script>
+        const images = document.getElementsByTagName("img");
+        const span = document.querySelectorAll("article > p > span");
+
+        var i = 0;
+        var y = 0;
+
+        while (i < images.length) {
+            console.log(images[i]);
+
+            i++;
+        }
+
+        console.log("************************************************")
+
+        while (y < span.length) {
+            console.log(span[y].innerHTML);
+            
+            y++;
+        }
+    </script>
 </body>
 
 </html>

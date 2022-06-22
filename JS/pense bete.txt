@@ -1,0 +1,7 @@
+getElementsByClassName(“maClasse”);
+getElementsByTagName(‘balise’)
+getElementById(‘monId’)
+getElementsByName(‘monName’)
+querySelector(‘.maClasse’) ou querySelector(‘#monId’) ou querySelector(‘div > p’) par exemple
+querySelectorAll(".maClasse") ou querySelectorAll("#monId")
+.length
