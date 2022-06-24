@@ -11,13 +11,12 @@ header {
     flex-direction: column;
     justify-content: space-between;
 
-    @include media-desktop ("desktop-up") {
-        background-size: cover;
-    }
-
     @include portrait-rotation("tablet-up") {
         background-image: none;
         background-color: #111;
+    }
+    @include min-width ("desktop-up") {
+        background-size: cover;
     }
 
     nav {
@@ -26,18 +25,16 @@ header {
         align-items: center;
         padding: 0px 15px;
         
-        @include media-desktop ("desktop-up") {
-            flex-direction: row-reverse;
-            padding: 0px 100px;
-        }
-        
-        @include media-tablet ("tablet-up", "tablet-down") {
+        @include min-width ("tablet-up") {
             flex-direction: row-reverse;
             padding: 0 100px 0 0;
         }
+        @include min-width ("desktop-up") {
+            padding: 20px 150px;
+        }
 
         .nav-burger {
-            @include media-desktop ("desktop-up") {
+            @include min-width ("desktop-up") {
                 display: none;
             }
 
@@ -65,7 +62,7 @@ header {
             display: none;
             list-style: none;
 
-            @include media-desktop ("desktop-up") {
+            @include min-width ("desktop-up") {
                 display: flex;
             }
             li {
@@ -83,12 +80,11 @@ header {
         img {
             width: 35%;
         
-            @include media-desktop ("desktop-up") {
-                width: 10%;
-            }
-        
-            @include media-tablet ("tablet-up", "tablet-down") {
+            @include min-width ("tablet-up") {
                 width: 15%;
+            }
+            @include min-width ("desktop-up") {
+                width: 10%;
             }
         }
 
@@ -103,13 +99,12 @@ header {
         text-align: center;
         background-color: rgba(0, 0, 0, 0.4);
         padding: 30px;
-
-        @include media-desktop ("desktop-up") {
-            padding: 1% 0 0 0;
-        }
         
-        @include media-tablet ("tablet-up", "tablet-down") {
+        @include min-width ("tablet-up") {
             padding: 60px;
+        }
+        @include min-width ("desktop-up") {
+            padding: 1% 0 0 0;
         }
 
         h1 {
@@ -117,21 +112,20 @@ header {
             margin-bottom: 30px;
             font-size: 1.8rem;
 
-            @include media-desktop ("desktop-up") {
+            @include min-width ("tablet-up") {
+                font-size: 2.5rem;
+            }
+            @include min-width ("desktop-up") {
                 text-align: right;
                 font-size: 3rem;
                 margin-bottom: 0;
                 padding-right: 5%;
             }
-        
-            @include media-tablet ("tablet-up", "tablet-down") {
-                font-size: 2.5rem;
-            }
         }
         .input-box-header {
             display: block;
 
-            @include media-desktop ("desktop-up") {
+            @include min-width ("desktop-up") {
                 display: none;
             }
 
@@ -140,7 +134,7 @@ header {
                 border: 2px solid $border-input-header;
                 color: $color-text-header;
             
-                @include media-tablet ("tablet-up", "tablet-down") {
+                @include min-width ("tablet-up") {
                     font-size: 1.1rem;
                 }
             }
@@ -150,7 +144,7 @@ header {
             width: 100%;
             text-align: left;
             
-            @include media-desktop ("desktop-up") {
+            @include min-width ("desktop-up") {
                 display: block;
             }
 
@@ -212,23 +206,13 @@ header {
 
 main {
     .tiger-celebration-article {
-        @include media-desktop ("desktop-up") {
-            display: flex;
-            margin: 70px 100px;
-        }
-
-        @include media-tablet ("tablet-up", "tablet-down") {
+        @include min-width ("tablet-up") {
             display: flex;
             margin: 70px 100px;
         }
 
         .img-box-tiger-celebration {
-            @include media-desktop ("desktop-up") {
-                width: 50%;
-                margin: auto;
-            }
-
-            @include media-tablet ("tablet-up", "tablet-down") {
+            @include min-width ("tablet-up") {
                 width: 50%;
                 margin: auto;
             }
@@ -236,38 +220,32 @@ main {
             img {
                 width: 100%;
                 margin-bottom: 20px;
-                @include media-desktop ("desktop-up") {
-                    margin: 0;
-                }
     
-                @include media-tablet ("tablet-up", "tablet-down") {
+                @include min-width ("tablet-up") {
                     margin: 0;
                 }
             }
         }
         .text-box-tiger-celebration {
-            @include media-desktop ("desktop-up") {
-                width: 50%;
-                padding-left: 100px;
-            }
-
-            @include media-tablet ("tablet-up", "tablet-down") {
+            @include min-width ("tablet-up") {
                 width: 50%;
                 padding-left: 20px;
+            }
+            @include min-width ("desktop-up") {
+                padding-left: 100px;
             }
 
             h3 {
                 margin-bottom: 10px;
                 font-size: 1rem;
 
-                @include media-desktop ("desktop-up") {
-                    margin-bottom: 50px;
-                    font-size: 1.5rem;
-                }
-
-                @include media-tablet ("tablet-up", "tablet-down") {
+                @include min-width ("tablet-up") {
                     margin-bottom: 30px;
                     font-size: 1.3rem;
+                }
+                @include min-width ("desktop-up") {
+                    margin-bottom: 50px;
+                    font-size: 1.5rem;
                 }
             }
             p {
@@ -275,30 +253,22 @@ main {
                 font-size: 0.9rem;
                 font-weight: 300;
 
-                @include media-desktop ("desktop-up") {
+                @include min-width ("desktop-up") {
                     font-size: 1.1rem;
                 }
                 
                 span {
                     display: none;
-
-                    @include media-desktop ("desktop-up") {
-                        display: inline;
-                    }
     
-                    @include media-tablet ("tablet-up", "tablet-down") {
+                    @include min-width ("tablet-up") {
                         display: inline;
                     }
                 }
             }
             .tablet-text-tiger-celebration {
                 display: none;
-
-                @include media-desktop ("desktop-up") {
-                    display: block;
-                }
             
-                @include media-tablet ("tablet-up", "tablet-down") {
+                @include min-width ("tablet-up") {
                     display: block;
                 }
             }
@@ -309,59 +279,46 @@ main {
         text-align: center;
         margin: 50px 0;
         padding: 20px 50px;
-
-        @include media-desktop ("desktop-up") {
-            display: flex;
-            margin: 0;
-            padding: 0 100px;
-            position: relative;
-        }
                 
-        @include media-tablet ("tablet-up", "tablet-down") {
+        @include min-width ("tablet-up") {
             display: flex;
             margin: 0;
             padding: 20px 100px;
         }
+        @include min-width ("desktop-up") {
+            padding: 0 100px;
+            position: relative;
+        }
 
         .img-box-member-section {
-            @include media-desktop ("desktop-up") {
+            @include min-width ("tablet-up") {
+                width: 50%;
+            }
+            @include min-width ("desktop-up") {
                 width: 40%;
                 position: relative;
                 top: 50px;
-            }
-
-            @include media-tablet ("tablet-up", "tablet-down") {
-                width: 50%;
             }
 
             img {
                 width: 100%;
                 padding-top: 50px;
                 filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
-                
-                @include media-desktop ("desktop-up") {
-                    padding: 0;
-                }
 
-                @include media-tablet ("tablet-up", "tablet-down") {
+                @include min-width ("tablet-up") {
                     padding: 0;
                 }
             }
         }
         .text-box-member-section {
-            @include media-desktop ("desktop-up") {
-                width: 50%;
-                margin: auto;
-            }
-
-            @include media-tablet ("tablet-up", "tablet-down") {
+            @include min-width ("tablet-up") {
                 width: 50%;
                 margin: auto;
             }
             .top-text-member-section {
                 display: none;
 
-                @include media-desktop ("desktop-up") {
+                @include min-width ("desktop-up") {
                     display: block;
                 }
 
@@ -380,13 +337,12 @@ main {
                 border: 2px solid $border-input-member-section;
                 color: $color-text-input-member-section;
 
-                @include media-desktop ("desktop-up") {
+                @include min-width ("tablet-up") {
+                    width: 60%;
+                }
+                @include min-width ("desktop-up") {
                     width: 40%;
                     font-size: 1.3rem;
-                }
-
-                @include media-tablet ("tablet-up", "tablet-down") {
-                    width: 60%;
                 }
             }
         }
@@ -394,54 +350,82 @@ main {
     .diaporama-section {
         background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../images/tigre4.jpg');
         background-size: cover;
+        background-repeat: no-repeat;
         text-align: center;
         padding: 220px 50px;
         margin: 50px 0;
-
-        @include media-desktop ("desktop-up") {
-            margin: 100px;
-            padding: 0;
-            background: url("../images/tigre4.jpg");
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 1000px;
-            width: 100%;
-        }
                 
-        @include media-tablet ("tablet-up", "tablet-down") {
+        @include min-width ("tablet-up") {
             margin: 70px 100px;
+        }
+        @include min-width ("desktop-up") {
+            position: relative;
+            margin: 150px;
+            padding: 900px 0 0 0;
+            background: url("../images/tigre4.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            &:after,
+            &:before {
+                content: '';
+                width: 100%;
+                height: 30px;
+                background-color: #111;
+                position: absolute;
+                left: 0;
+            }
+
+            &:after {
+                top: 0px;
+            }
+            &:before {
+                bottom: 0px;
+            }
         }
 
         .box-diaporama-section {
-            @include media-desktop ("desktop-up") {
-                background-color: rgba(255,255,255,0.5);
+            @include min-width ("desktop-up") {
+                background-color: rgba(255, 255, 255, 0.3);
+                padding: 20px;
+                position: relative;
                 display: flex;
-                justify-content: space-around;
             }
 
             .input-box-diaporama-section {
+                @include min-width ("desktop-up") {
+                    width: 50%;
+                }
+
                 input {
                     width: 100%;
                     background-color: $background-input-diaporama-section;
                     border: 2px solid $border-input-diaporama-section;
                     color: $color-text-input-diaporama-section;
                     font-size: 1.2rem;
-        
-                    @include media-desktop ("desktop-up") {
+                        
+                    @include min-width ("tablet-up") {
                         width: 60%;
                         padding: 20px 15px;
                         font-size: 2.5rem;
                     }
-                        
-                    @include media-tablet ("tablet-up", "tablet-down") {
-                        width: 60%;
-                        padding: 20px 15px;
-                        font-size: 2.5rem;
+                    @include min-width ("desktop-up") {
+                        width: fit-content;
+                        padding: 15px 30px;
+                        font-size: 1.5rem;
                     }
                 }
             }
             .text-box-diaporama-section {
+                display: none;
+
+                @include min-width ("desktop-up") {
+                    display: block;
+                    width: 50%;
+                    text-align: left;
+                    margin: auto;
+                }
+
                 p {
                     font-size: 1.5rem;
                     font-weight: 600;
@@ -461,27 +445,22 @@ footer {
     text-align: center;
     padding: 50px 0;
     width: 100%;
-                
-    @include media-desktop ("desktop-up") {
+
+    @include min-width ("tablet-up") {
         display: flex;
         justify-content: space-between;
         align-items: center;
         text-align: left;
         padding: 50px 100px;
     }
-
-    @include media-tablet ("tablet-up", "tablet-down") {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-align: left;
-        padding: 50px 100px;
+    @include min-width ("desktop-up") {
+        padding: 50px 150px;
     }
 
     .img-box-footer {
         display: none;
 
-        @include media-desktop ("desktop-up") {
+        @include min-width ("desktop-up") {
             display: block;
             width: 20%;
 
@@ -491,20 +470,15 @@ footer {
         }
     }
     .box-footer {
-        @include media-desktop ("desktop-up") {
-            display: flex;
-            align-items: center;
-            flex-direction: row-reverse;
-            justify-content: space-between;
-            width: 40%;
-        }
-
-        @include media-tablet ("tablet-up", "tablet-down") {
+        @include min-width ("tablet-up") {
             display: flex;
             align-items: center;
             flex-direction: row-reverse;
             justify-content: space-between;
             width: 60%;
+        }
+        @include min-width ("desktop-up") {
+            width: 40%;
         }
 
         .input-box-footer {
@@ -515,13 +489,8 @@ footer {
                 width: 60%;
                 font-size: 1.3rem;
                 margin-bottom: 35px;
-
-                @include media-desktop ("desktop-up") {
-                    width: fit-content;
-                    margin: 0;
-                }
                     
-                @include media-tablet ("tablet-up", "tablet-down") {
+                @include min-width ("tablet-up") {
                     width: fit-content;
                     margin: 0;
                 }
@@ -548,27 +517,20 @@ footer {
         justify-content: space-between;
         margin: 50px auto 0 auto;
         width: 60%;
-
-        @include media-desktop ("desktop-up") {
-            width: 20%;
-            margin: 0;
-            justify-content: flex-end;
-        }
                 
-        @include media-tablet ("tablet-up", "tablet-down") {
+        @include min-width ("tablet-up") {
             width: 30%;
             margin: 0;
             justify-content: flex-end;
         }
+        @include min-width ("desktop-up") {
+            width: 20%;
+        }
 
         li {
             width: 50px;
-
-            @include media-desktop ("desktop-up") {
-                margin-left: 20px;
-            }
                 
-            @include media-tablet ("tablet-up", "tablet-down") {
+            @include min-width ("tablet-up") {
                 margin-left: 20px;
             }
 

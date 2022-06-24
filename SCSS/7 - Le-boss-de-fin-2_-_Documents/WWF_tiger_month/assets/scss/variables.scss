@@ -29,17 +29,11 @@ $color-text-footer: #fff;
 // -- Media queries --
 $breakpoints: (
     "tablet-up": 720px,
-    "tablet-down": 1199px,
     "desktop-up": 1200px,
 );
 
 // media querie pour breakpoints min et max
-@mixin media-tablet($_keymin, $_keymax) {
-    @media screen and (min-width: map-get($breakpoints, $_keymin)) and (max-width: (map-get($breakpoints, $_keymax) - 1)) {
-        &{ @content; }
-    }
-}
-@mixin media-desktop($_key) {
+@mixin min-width($_key) {
     @media screen and (min-width: map-get($breakpoints, $_key)) {
         &{ @content; }
     }
