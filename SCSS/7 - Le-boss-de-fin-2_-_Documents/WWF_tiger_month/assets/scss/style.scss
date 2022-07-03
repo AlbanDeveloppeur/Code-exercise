@@ -1,5 +1,5 @@
-@import "root.scss";
 @import "variables.scss";
+@import "root.scss";
 
 header {
     min-height: 100vh;
@@ -11,14 +11,34 @@ header {
     flex-direction: column;
     justify-content: space-between;
 
+    @include portrait-rotation("tablet-up") {
+        background-image: none;
+        background-color: #111;
+    }
+    @include min-width ("desktop-up") {
+        background-size: cover;
+    }
+
     nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 0;
+        padding: 0px 15px;
+        
+        @include min-width ("tablet-up") {
+            flex-direction: row-reverse;
+            padding: 0 100px 0 0;
+        }
+        @include min-width ("desktop-up") {
+            padding: 20px 150px;
+        }
 
         .nav-burger {
-            width: 60px;
+            @include min-width ("desktop-up") {
+                display: none;
+            }
+
+            width: 50px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -28,7 +48,7 @@ header {
             .burger-line {
                 display: block;
                 background-color: #fff;
-                height: 5px;
+                height: 4px;
                 width: 100%;
             }
             .burger-line:first-of-type {
@@ -38,9 +58,38 @@ header {
                 margin-top: $gap-line-burger
             }
         }
+        .nav-desktop {
+            display: none;
+            list-style: none;
+
+            @include min-width ("desktop-up") {
+                display: flex;
+            }
+            li {
+                margin-left: 80px;
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    font-weight: 600;
+                    font-size: 1.8rem;
+                }
+            }
+        }
 
         img {
-            width: 40%;
+            width: 35%;
+        
+            @include min-width ("tablet-up") {
+                width: 15%;
+            }
+            @include min-width ("desktop-up") {
+                width: 10%;
+            }
+        }
+
+        @include portrait-rotation("tablet-up") {
+            display: none;
         }
     }
 
@@ -50,27 +99,114 @@ header {
         text-align: center;
         background-color: rgba(0, 0, 0, 0.4);
         padding: 30px;
+        
+        @include min-width ("tablet-up") {
+            padding: 60px;
+        }
+        @include min-width ("desktop-up") {
+            padding: 1% 0 0 0;
+        }
 
         h1 {
             color: $color-text-header;
             margin-bottom: 30px;
-            font-size: 2rem;
+            font-size: 1.8rem;
+
+            @include min-width ("tablet-up") {
+                font-size: 2.5rem;
+            }
+            @include min-width ("desktop-up") {
+                text-align: right;
+                font-size: 3rem;
+                margin-bottom: 0;
+                padding-right: 5%;
+            }
         }
-        input {
-            background-color: #000;
-            border: 2px solid #fff;
-            border-radius: 20px;
-            width: fit-content;
-            padding: 10px 15px;
-            color: $color-text-header;
-            font-size: 1rem;
-            font-weight: 600;
+        .input-box-header {
+            display: block;
+
+            @include min-width ("desktop-up") {
+                display: none;
+            }
+
+            input {
+                background-color: $background-input-header;
+                border: 2px solid $border-input-header;
+                color: $color-text-header;
+            
+                @include min-width ("tablet-up") {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+        .text-box-header {
+            display: none;
+            width: 100%;
+            text-align: left;
+            
+            @include min-width ("desktop-up") {
+                display: block;
+            }
+
+            p {
+                color: #fff;
+                font-size: 1.1rem;
+                padding: 0 6% 0 50%;
+
+                &:first-child {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        @include portrait-rotation("tablet-up") {
+            display: none;
+        }
+    }
+
+    .tablet-portrait-mode {
+        display: none;
+
+        @include portrait-rotation("tablet-up") {
+            margin: auto;
+            text-align: center;
+            display: block;
+
+            div {
+                width: 70%;
+                position: relative;
+                margin: auto;
+
+                &:before {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    padding: 15px 0;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    position: absolute;
+                    top: -20px;
+                    left: 0;
+                    z-index: 5;
+                }
+                img {
+                    width: 100%;
+                    position: relative;
+                    z-index: 10;
+                }
+            }
+            h2 {
+                color: #fff;
+                margin-top: 50px;
+                font-size: 2rem;
+            }
         }
     }
 }
 
 main {
     .tiger-celebration-article {
+<<<<<<< HEAD
         img {
             width: 100%;
             margin-bottom: 20px;
@@ -136,11 +272,348 @@ footer {
                 }
             }
         }
+=======
+        @include min-width ("tablet-up") {
+            display: flex;
+            margin: 70px 100px;
+        }
+
+        .img-box-tiger-celebration {
+            @include min-width ("tablet-up") {
+                width: 50%;
+                margin: auto;
+            }
+
+            img {
+                width: 100%;
+                margin-bottom: 20px;
+    
+                @include min-width ("tablet-up") {
+                    margin: 0;
+                }
+            }
+        }
+        .text-box-tiger-celebration {
+            @include min-width ("tablet-up") {
+                width: 50%;
+                padding-left: 20px;
+            }
+            @include min-width ("desktop-up") {
+                padding-left: 100px;
+            }
+
+            h3 {
+                margin-bottom: 10px;
+                font-size: 1rem;
+
+                @include min-width ("tablet-up") {
+                    margin-bottom: 30px;
+                    font-size: 1.3rem;
+                }
+                @include min-width ("desktop-up") {
+                    margin-bottom: 50px;
+                    font-size: 1.5rem;
+                }
+            }
+            p {
+                word-spacing: 5px;
+                font-size: 0.9rem;
+                font-weight: 300;
+
+                @include min-width ("desktop-up") {
+                    font-size: 1.1rem;
+                }
+                
+                span {
+                    display: none;
+    
+                    @include min-width ("tablet-up") {
+                        display: inline;
+                    }
+                }
+            }
+            .tablet-text-tiger-celebration {
+                display: none;
+            
+                @include min-width ("tablet-up") {
+                    display: block;
+                }
+            }
+        }
+    }
+    .member-section {
+        background-color: $background-member-section;
+        text-align: center;
+        margin: 50px 0;
+        padding: 20px 50px;
+                
+        @include min-width ("tablet-up") {
+            display: flex;
+            margin: 0;
+            padding: 20px 100px;
+        }
+        @include min-width ("desktop-up") {
+            padding: 0 100px;
+            position: relative;
+        }
+
+        .img-box-member-section {
+            @include min-width ("tablet-up") {
+                width: 50%;
+            }
+            @include min-width ("desktop-up") {
+                width: 40%;
+                position: relative;
+                top: 50px;
+            }
+
+            img {
+                width: 100%;
+                padding-top: 50px;
+                filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+
+                @include min-width ("tablet-up") {
+                    padding: 0;
+                }
+            }
+        }
+        .text-box-member-section {
+            @include min-width ("tablet-up") {
+                width: 50%;
+                margin: auto;
+            }
+            .top-text-member-section {
+                display: none;
+
+                @include min-width ("desktop-up") {
+                    display: block;
+                }
+
+                p {
+                    color: #fff;
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    margin-bottom: 30px;
+                }
+            }
+            input {
+                margin-top: 20px;
+                width: 100%;
+                font-size: 1.2rem;
+                background-color: $background-input-member-section;
+                border: 2px solid $border-input-member-section;
+                color: $color-text-input-member-section;
+
+                @include min-width ("tablet-up") {
+                    width: 60%;
+                }
+                @include min-width ("desktop-up") {
+                    width: 40%;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+    .diaporama-section {
+        background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../images/tigre4.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+        padding: 220px 50px;
+        margin: 50px 0;
+                
+        @include min-width ("tablet-up") {
+            margin: 70px 100px;
+        }
+        @include min-width ("desktop-up") {
+            position: relative;
+            margin: 150px;
+            padding: 900px 0 0 0;
+            background: url("../images/tigre4.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            &:after,
+            &:before {
+                content: '';
+                width: 100%;
+                height: 30px;
+                background-color: #111;
+                position: absolute;
+                left: 0;
+            }
+
+            &:after {
+                top: 0px;
+            }
+            &:before {
+                bottom: 0px;
+            }
+        }
+
+        .box-diaporama-section {
+            @include min-width ("desktop-up") {
+                background-color: rgba(255, 255, 255, 0.3);
+                padding: 20px;
+                position: relative;
+                display: flex;
+            }
+
+            .input-box-diaporama-section {
+                @include min-width ("desktop-up") {
+                    width: 50%;
+                }
+
+                input {
+                    width: 100%;
+                    background-color: $background-input-diaporama-section;
+                    border: 2px solid $border-input-diaporama-section;
+                    color: $color-text-input-diaporama-section;
+                    font-size: 1.2rem;
+                        
+                    @include min-width ("tablet-up") {
+                        width: 60%;
+                        padding: 20px 15px;
+                        font-size: 2.5rem;
+                    }
+                    @include min-width ("desktop-up") {
+                        width: fit-content;
+                        padding: 15px 30px;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+            .text-box-diaporama-section {
+                display: none;
+
+                @include min-width ("desktop-up") {
+                    display: block;
+                    width: 50%;
+                    text-align: left;
+                    margin: auto;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    @include portrait-rotation("tablet-up") {
+        display: none;
+    }
+}
+
+footer {
+    background-color: $backgound-footer;
+    text-align: center;
+    padding: 50px 0;
+    width: 100%;
+
+    @include min-width ("tablet-up") {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 50px 100px;
+    }
+    @include min-width ("desktop-up") {
+        padding: 50px 150px;
+    }
+
+    .img-box-footer {
+        display: none;
+
+        @include min-width ("desktop-up") {
+            display: block;
+            width: 20%;
+
+            img {
+                width: 60%;
+            }
+        }
+    }
+    .box-footer {
+        @include min-width ("tablet-up") {
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            width: 60%;
+        }
+        @include min-width ("desktop-up") {
+            width: 40%;
+        }
+
+        .input-box-footer {
+            input {
+                background-color: $background-input-footer;
+                border: 2px solid $border-input-footer;
+                color: $color-text-footer;
+                width: 60%;
+                font-size: 1.3rem;
+                margin-bottom: 35px;
+                    
+                @include min-width ("tablet-up") {
+                    width: fit-content;
+                    margin: 0;
+                }
+            }
+        }
+        .list-info-footer {
+            li {
+                margin: 15px 0;
+            }
+        }
+    }
+    ul li {
+        list-style: none;
+        font-size: 1.3rem;
+        font-weight: 600;
+
+        a {
+            text-decoration: none;
+            color: $color-text-footer;
+        }
+>>>>>>> 64f7d4d548589455d33b8095e0d3dff7b1de12cb
     }
     .list-social-footer {
         display: flex;
         justify-content: space-between;
+<<<<<<< HEAD
         align-items: center;
         width: 70%;
+=======
+        margin: 50px auto 0 auto;
+        width: 60%;
+                
+        @include min-width ("tablet-up") {
+            width: 30%;
+            margin: 0;
+            justify-content: flex-end;
+        }
+        @include min-width ("desktop-up") {
+            width: 20%;
+        }
+
+        li {
+            width: 50px;
+                
+            @include min-width ("tablet-up") {
+                margin-left: 20px;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    @include portrait-rotation("tablet-up") {
+        display: none;
+>>>>>>> 64f7d4d548589455d33b8095e0d3dff7b1de12cb
     }
 }

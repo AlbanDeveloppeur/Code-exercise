@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Header
 $color-text-header: #fff;
 $background-member-section: #5eed89;
@@ -6,6 +7,52 @@ $background-input-diaporama-section: #111;
 $background-footer : #333;
 $border-input-footer: #00ede5;
 $background-input-footer: #0f84f1;
+=======
+// Input
+$color-box-shadow-input: rgba(0, 0, 0, 0.5);
+>>>>>>> 64f7d4d548589455d33b8095e0d3dff7b1de12cb
 
+// -- Header --
+$color-text-header: #fff;
+$background-input-header: #111;
+$border-input-header: #fff;
     // Nav
-    $gap-line-burger: 20px;
+    $gap-line-burger: 15px;
+
+// -- Main --
+    // Member section
+    $background-member-section: #61ef7f;
+    $background-input-member-section: #5fafec;
+    $border-input-member-section: #fff;
+    $color-text-input-member-section: #fffcfb;
+
+    // Diaporama section
+    $background-input-diaporama-section: #111;
+    $border-input-diaporama-section: #fff;
+    $color-text-input-diaporama-section: #fff;
+
+// -- Footer --
+$backgound-footer: #333;
+$background-input-footer: #0e81f6;
+$border-input-footer: #0bf2e8;
+$color-text-footer: #fff;
+
+// -- Media queries --
+$breakpoints: (
+    "tablet-up": 720px,
+    "desktop-up": 1200px,
+);
+
+// media querie pour breakpoints min et max
+@mixin min-width($_key) {
+    @media screen and (min-width: map-get($breakpoints, $_key)) {
+        &{ @content; }
+    }
+}
+
+// media querie pour détécter si l'appareil est à mode paysage ou portrait
+@mixin portrait-rotation($_key) {
+    @media screen and (min-width: map-get($breakpoints, $_key)) and (orientation: portrait) {
+        &{ @content; }
+    }
+}
