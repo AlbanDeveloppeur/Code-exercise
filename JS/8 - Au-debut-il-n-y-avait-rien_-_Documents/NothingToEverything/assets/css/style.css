@@ -29,6 +29,10 @@ nav {
     z-index: 30;
 }
 
+.box-logo-header {
+    width: 5%;
+}
+
 ul {
     display: flex;
     justify-content: flex-end;
