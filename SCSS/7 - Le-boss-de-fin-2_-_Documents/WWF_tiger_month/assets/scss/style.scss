@@ -70,10 +70,6 @@ header {
 }
 
 main {
-    article {
-        padding: 30px;
-    }
-
     .tiger-celebration-article {
         img {
             width: 100%;
@@ -86,5 +82,65 @@ main {
             word-spacing: 5px;
             letter-spacing: 1px;
         }
+    }
+    .member-section {
+        background-color: $background-member-section;
+        text-align: center;
+
+        img {
+            width: 90%;
+            margin-top: 30px;
+        }
+        input {
+            background-color: $background-input-member-section;
+            margin-top: 10px;
+        }
+    }
+    .diaporama-section {
+        text-align: center;
+        background: url(../images/tigre4.jpg);
+        padding: 200px 0;
+        background-size: cover;
+        margin: 50px 0;
+
+        input {
+            background-color: $background-input-diaporama-section;
+        }
+    }
+}
+
+footer {
+    background-color: $background-footer;
+    text-align: center;
+
+    input {
+        width: 80%;
+        background-color: $background-input-footer;
+        border-color: $border-input-footer;
+        font-size: 1.5rem;
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            margin: 15px 0;
+
+            a {
+                color: #fff;
+                font-size: 1.5rem;
+                text-decoration: none;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .list-social-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
     }
 }
