@@ -15,51 +15,118 @@
 </head>
 
 <body>
-
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#"><img src="assets/img/logo.png" alt="Logo In Your Face"></a></li>
-                <li><a href="#">Le rouge à lèvres</a></li>
-                <li><a href="#">Le Mascara</a></li>
-                <li><a href="#">Le Fard à paupières</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <article>
-                <div class="rounded">
-                    <img src="assets/img/rougealevres.jpeg" alt="">
-                </div>
-                <div>
-                    <h2>Le rouge à lèvres</h2>
-                    <p>
-                        Le rouge à lèvres est un produit de cosmétique permettant de souligner les lèvres en les colorant ou non. Il en existe beaucoup de variantes, quant à la tenue, la couleur, la texture et le fini. Un rouge à lèvres n'est pas forcément rouge, même si le plus souvent sa couleur est proche du rouge (rouges vifs, sombres, vermillons, roses, orangés, etc.). Des couleurs comme le bleu ou le vert ne se rencontrent qu'exceptionnellement.
-                    </p>
-                </div>
-            </article>
-        </section>
-    </main>
-
     <script>
+        // Déclaration du tableau contenant le contenu écrit de la page
         const articles = [{
             name: "Rougealevres",
             title: "Le rouge à lèvres",
             article: "Le rouge à lèvres est un produit de cosmétique permettant de souligner les lèvres en les colorant ou non. Il en existe beaucoup de variantes, quant à la tenue, la couleur, la texture et le fini. Un rouge à lèvres n'est pas forcément rouge, même si le plus souvent sa couleur est proche du rouge (rouges vifs, sombres, vermillons, roses, orangés, etc.). Des couleurs comme le bleu ou le vert ne se rencontrent qu'exceptionnellement.",
-            image: "img/rougealevres.jpeg"
+            image: "assets/img/rougealevres.jpeg"
         }, {
             name: "Mascara",
             title: "Le Mascara",
             article: "Le mascara se compose d'un tube contenant le produit colorant sous forme liquide ou crémeuse et d'une brosse droite, courbée voire sphérique. La brosse est plongée dans le tube puis appliquée sur les cils. Le mascara contient de l 'eau, des épaississants, des agents filmogènes, des colorants et des conservateurs. Il existe en différents couleurs mais principalement en  noir. Il existe des mascaras résistants à l 'eau, ce qui leur évite de couler sous les yeux en cas de pluie, de larmes ou de sueur excessive.",
-            image: "img/mascara.png"
+            image: "assets/img/mascara.png"
         }, {
             name: "Fard",
             title: "Le Fard à paupières",
             article: "Le fard à paupières ou ombre à paupières, il se présente généralement sous forme de poudre compactée qui s'applique avec une brosse ou à la main. Il s'applique par nuance de la plus claire à la plus foncée en commençant près de l'œil sur la paupière mobile et en terminant par la nuance la plus foncée au ras des cils.",
-            image: "img/fard.jpeg"
+            image: "assets/img/fard.jpeg"
         }]
+
+        // add Header
+        _create_element('body', 'header');
+        
+        // add navigation menu
+        add_navigation_menu();
+        
+        // add Main content
+        add_main_content();
+        
+        // add Footer
+        add_footer();
+
+        function add_navigation_menu() {
+            // add 'nav'
+            _create_element('header', 'nav');
+
+            // create and display 'ul'
+            _create_element('nav', 'ul');
+
+            // create and display 'li' for the logo
+            _create_element('ul', 'li');
+            
+            // create and display logo
+            _create_element('ul li', 'img', 'src', 'assets/img/logo.png');
+
+            // add navigation menu
+            for (let i = 0; i < articles.length; i++) {
+                // create and display 'li'
+                _create_element('ul', 'li');
+                // create and display 'a'
+                _create_element('ul li:last-child', 'a', 'href', '#' + articles[i].name, articles[i].title);
+            }
+        }
+
+        function add_main_content() {
+            // display 'main'
+            _create_element('body', 'main');
+
+            for (let i = 0; i < articles.length; i++) {
+                // create and display 'section' id = articles.name
+                _create_element('main', 'section', 'id', articles[i].name);
+                
+                // condition pour l'agencement des 'article'
+                if (!(i % 2)) {
+                    // create and display 'img'
+                    _create_img_article(articles[i]);
+                    // create and display 'article' content
+                    _create_content_article(articles[i]);
+                } else {
+                    // create and display 'img'
+                    _create_content_article(articles[i]);
+                    // create and display 'article' content
+                    _create_img_article(articles[i]);
+                }
+            }
+        }
+
+        function add_footer() {
+            // create and display 'footer'
+            _create_element('body', 'footer');
+
+            // create and display 'a'
+            _create_element('footer', 'a', 'href', "#");
+            
+            // create and display 'img'
+            _create_element('footer a', 'img', 'src', 'assets/img/logo.png');
+        }
+
+        function _create_img_article(articles) {
+            _create_element('#' + articles.name, 'div', 'class', 'rounded');
+            _create_element('#' + articles.name + ' .rounded', 'img', 'src', articles.image);
+        }
+
+        function _create_content_article(articles) {
+            _create_element('#' + articles.name, 'article');
+            _create_element('#' + articles.name + ' article', 'h2', "", "", articles.title);
+            _create_element('#' + articles.name + ' article', 'p', "", "", articles.article);
+        }
+
+        function _create_element(target_element, create_element_string, attribute = "", attribute_value = "", innex_text_value = "") {
+            const create_element = document.createElement(create_element_string);
+            
+            if (attribute != "" && attribute_value != "") {
+                create_element.setAttribute(attribute, attribute_value);
+            }
+
+            if (innex_text_value != "") {
+                create_element.innerText = innex_text_value;
+            }
+
+            const var_element = document.querySelector(target_element);
+            var_element.append(create_element);
+        }
     </script>
 
 </body>
