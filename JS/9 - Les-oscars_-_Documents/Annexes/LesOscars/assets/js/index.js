@@ -30,3 +30,25 @@ const poneys = [
     charisma: "30"
   }
 ];
+
+const buttons = document.querySelectorAll("[data-carousel-button]");
+console.log(buttons);
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+		console.log("click");
+    const offset = button.dataset.carouselButton === "next" ? 1 : -1;
+    const slides = button
+      .closest("[data-carousel]")
+      .querySelector("[data-slides");
+
+    const activeSlide = slides.querySelector("[data-active");
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+
+    if (newIndex < 0) newIndex = slides.children.lenght - 1;
+    if (newIndex >= slides.children.lenght) newIndex = 0;
+
+    slides.children[newIndex].dataset.active = true;
+    delete activeSlide.dataset.active;
+  });
+});

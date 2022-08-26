@@ -32,16 +32,17 @@
     </header>
 
     <main>
-        <div id="left-arrow" class="arrow">
-            <img src="assets/img/arrowDis.png" alt="Flèche permettant de faire défiler les poneys vers la gauche">
-        </div>
-        <section class="carousel-box">
-            <img src="assets/img/pony.png" alt="Un poney">
-            <img src="assets/img/pony2.png" alt="Un poney">
+        <section class="carousel" data-carousel>
+            <button class="carousel-button previous" data-carousel-button="previous"><img src="assets/img/arrowDis.png" alt=""></button>
+            <button class="carousel-button after" data-carousel-button="next"><img src="assets/img/arrow.png" alt=""></button>
+            <ul data-slides>
+                <li class="slide" data-active><img src="assets/img/pony.png" alt=""></li>
+                <li class="slide"><img src="assets/img/pony2.png" alt=""></li>
+                <li class="slide"><img src="assets/img/pony3.png" alt=""></li>
+                <li class="slide"><img src="assets/img/pony4.png" alt=""></li>
+                <li class="slide"><img src="assets/img/pony5.png" alt=""></li>
+            </ul>
         </section>
-        <div id="right-arrow" class="arrow">
-            <img src="assets/img/arrow.png" alt="Flèche permettant de faire défiler les poneys vers la droite">
-        </div>
     </main>
     
     <script src="assets/js/index.js"></script>

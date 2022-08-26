@@ -32,29 +32,47 @@ header h2 {
 }
 
 main {
-    display: flex;
+    width: 60%;
+    height: 600px;
+    margin: 100px auto;
+}
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.carousel > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.slide {
     width: 50%;
-    margin: 5rem auto 0 auto;
-}
-main .arrow {
-    width: 7%;
     margin: auto;
-    cursor: pointer;
-}
-main #right-arrow {
-    transform: rotate(180deg);
-}
-main .arrow img {
-    width: 100%;
-}
-main section {
-    width: 100%;
     text-align: center;
     position: absolute;
+    inset: 0;
+    opacity: 0;
 }
-main section img {
-    height: 100%;
-    display: inline-block;
-	transition: transform 400ms ease-out;
-    position: relative;
+.slide[data-active] {
+    opacity: 1;
+}
+.carousel-button {
+    width: 100px;
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel-button.previous {
+    left: 1rem;
+}
+.carousel-button.after {
+    right: 1rem;
+    transform: rotate(180deg) translateY(50%);
+}
+.carousel-button img {
+    width: 100%;
 }
