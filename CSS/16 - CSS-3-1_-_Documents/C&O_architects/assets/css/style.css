@@ -63,55 +63,53 @@ html{ scroll-behavior: smooth; }
     color: var(--white);
 }
 
-/* HEADER */
-header {
+/* OPTI */
+header,
+#cities,
+#contact,
+#social {
     min-height: 100vh;
-    background-image: url("../images/building.jpeg");
-    background-color: var(--black-transparent);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* HEADER */
+header {
+    background-image: url("../images/building.jpeg");
+    background-color: var(--black-transparent);
     background-blend-mode: hard-light;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
-header div {
+header h1 {
     margin-right: 100px;
     text-align: center;
-}
-header div h1 {
-    border: 1px solid var(--white);
+    border: 2px solid var(--white);
     padding: 50px 100px;
-}
-header div h1,
-header div span {
     font-size: 4rem;
     color: var(--white);
 }
-header div span {
+header p {
     font-size: 7rem;
     letter-spacing: 10px;
 }
 
 /* CITIES */
 #cities {
-    min-height: 100vh;
-    background: url(../images/building2.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-image: url("../images/building2.jpg");
     background-color: var(--black-transparent);
     background-blend-mode: hard-light;
     position: relative;
 }
 #cities .parent {
-    width: 50%;
-    height: 50%;
+    width: 800px;
+    height: 450px;
     position: absolute;
     top: 50%;
     right: 10%;
-    perspective: 800px;
+    perspective: 700px;
     transform: translateY(-50%);
 }
 #cities .rotate {
@@ -177,11 +175,7 @@ header div span {
 
 /* CONTACT */
 #contact {
-    min-height: 100vh;
-    background: url(../images/building3.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-image: url(../images/building3.jpg);
     background-color: var(--blue);
     background-blend-mode: hard-light;
     position: relative;
@@ -251,11 +245,7 @@ h2 {
 
 /* Social */
 #social {
-    min-height: 100vh;
-    background: url(../images/building4.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-image: url(../images/building4.jpg);
     background-color: var(--pink);
     background-blend-mode: overlay;
     position: relative;

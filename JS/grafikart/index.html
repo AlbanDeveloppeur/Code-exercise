@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation JavaScript</title>
+</head>
+
+<body>
+
+    <!-- Exervice Palindrome -->
+    <!-- <script>
+        function isPalindrome (word) {
+            const reverseWord = word
+                .split('')
+                .reverse()
+                .join('')
+            ;
+
+            return reverseWord.toUpperCase() === word.toUpperCase();
+        }
+
+        const words = [
+            "kayak",
+            "SOS",
+            "Kayak",
+            "Bonjour"
+        ];
+
+        for (let word of words) {
+            switch (isPalindrome(word)) {
+                case true:
+                    console.log(`${word} est un palindrome`);
+                    break;
+
+                default:
+                    console.error(`${word} n'est pas un palindrome`);
+                    break;
+            }
+        }
+    </script> -->
+
+    <script>
+        function moyenneNote (notes) {
+            let totalNotes = 0;
+
+            for (let note in notes) {
+                totalNotes += notes[note];
+            }
+
+            return totalNotes / notes.length;
+        }
+
+        const students = [
+            {
+                name: 'John',
+                notes: [1, 20, 18, 19, 12]
+            },
+            {
+                name: 'Jane',
+                notes: [17, 18, 20, 13, 15]
+            },
+            {
+                name: 'Sophie',
+                notes: [17, 12, 14, 15, 13]
+            },
+            {
+                name: 'Marc',
+                notes: [2, 3, 5, 8, 9]
+            },
+            {
+                name: 'Manon',
+                notes: [18, 17, 18, 19, 12]
+            }
+        ]
+
+        for (let student of students) {
+            student.moyenne = moyenneNote(student.notes);
+        }
+
+        students.sort(function sortByMoyenne(a, b) {
+            return b.moyenne - a.moyenne;
+        })
+
+        for (let i = 0; i < 3; i++) {
+            console.log(`L'étudiant ${students[i]['name']} est en position ${i + 1}`)
+        }
+    </script>
+</body>
+
+</html>

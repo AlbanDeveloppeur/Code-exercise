@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pony Fighter !!!</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="ponyRides">
+            <span class="red">P</span>
+            <span class="orange">o</span>
+            <span class="yellow">n</span>
+            <span class="green">y</span>
+            
+            <span class="blue">F</span>
+            <span class="violet">i</span>
+            <span class="rose">g</span>
+            <span class="red">h</span>
+            <span class="orange">t</span>
+            <span class="yellow">e</span>
+            <span class="green">r</span>
+            
+            <span class="blue">I</span>
+            <span class="red">I</span>
+            <span class="orange">I</span></h1>
+        <h2>Choose your character !</h2>
+    </header>
+
+    <main>
+        <div id="slider">
+            <div id="slide-box-img">
+                <img id="slide-img" src="./assets/img/pony.png" alt="Image d'un poney de combat">
+                <div id="box-stats-poney" class="d-none">
+                    <p id="poney-name" class="ponyRides"></p>
+                    <p id="poney-description"></p>
+                    <ul id="poney-stats">
+                        <li id="poney-stats-speed" class="ponyRides">
+                            <p>Vitesse :</p>
+                            <div class="poney-stats-progressbar-box">
+                                <div class="poney-stats-progressbar"></div>
+                            </div>
+                        </li>
+                        <li id="poney-stats-strength" class="ponyRides">
+                            <p>Force : </p>
+                            <div class="poney-stats-progressbar-box">
+                                <div class="poney-stats-progressbar"></div>
+                            </div>
+                        </li>
+                        <li id="poney-stats-charisma" class="ponyRides">
+                            <p>Charisme : </p>
+                            <div class="poney-stats-progressbar-box">
+                                <div class="poney-stats-progressbar"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="previous">
+                <img id="previous-arrow" src="./assets/img/arrow.png" alt="Flêche précédente">
+                <img id="prev-disabled" class="d-none" src="./assets/img/arrowDis.png" alt="Flêche précédente">
+            </div>
+            <div id="next">
+                <img id="next-arrow" src="./assets/img/arrow.png" alt="Flêche suivante">
+                <img id="next-disabled" class="d-none" src="./assets/img/leftDis.png" alt="Flêche suivante">
+            </div>
+        </div>
+    </main>
+
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
